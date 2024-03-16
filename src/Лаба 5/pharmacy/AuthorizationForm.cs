@@ -1,14 +1,5 @@
 ﻿using pharmacy.data;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace pharmacy
@@ -30,15 +21,10 @@ namespace pharmacy
         private void Form1_Load(object sender, EventArgs e)
         {
             DBConnection.ConnectionDB();
-            button2.Image = Properties.Resources.close_eye;
+            showHideBtn.Image = Properties.Resources.close_eye;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e) //Кнопка авторизоваться
+        private void authorizeBtn_Click(object sender, EventArgs e) //Кнопка авторизоваться
         {
             string login = textBox1.Text;
             string password = textBox2.Text;
@@ -55,9 +41,6 @@ namespace pharmacy
                 label3.Text = "Заполните все обязательные поля!";
             }           
         }
-
-       
-
 
         public void OpenForm()
         {
@@ -83,22 +66,17 @@ namespace pharmacy
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void showHideBtn_Click(object sender, EventArgs e)
         {
             if (textBox2.UseSystemPasswordChar == false)
             {
                 textBox2.UseSystemPasswordChar = true;
-                button2.Image = Properties.Resources.close_eye;
+                showHideBtn.Image = Properties.Resources.close_eye;
             }
             else
             {
                 textBox2.UseSystemPasswordChar = false;
-                button2.Image = Properties.Resources.open_eye;
+                showHideBtn.Image = Properties.Resources.open_eye;
             }
 
         }

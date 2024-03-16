@@ -97,7 +97,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.expirationDateBox = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pharm = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -147,7 +147,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1036, 416);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Номер
             // 
@@ -247,7 +246,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 20);
             this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -315,7 +313,6 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(763, 432);
             this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // id
             // 
@@ -460,7 +457,6 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(292, 20);
             this.textBox5.TabIndex = 18;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button2
             // 
@@ -506,7 +502,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(291, 21);
             this.comboBox1.TabIndex = 23;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button4
             // 
@@ -549,7 +544,6 @@
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView3.Size = new System.Drawing.Size(1018, 470);
             this.dataGridView3.TabIndex = 27;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // Column9
             // 
@@ -706,14 +700,14 @@
             this.label8.TabIndex = 61;
             this.label8.Text = "Поиск:";
             // 
-            // comboBox2
+            // expirationDateBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(366, 27);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(127, 21);
-            this.comboBox2.TabIndex = 60;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
+            this.expirationDateBox.FormattingEnabled = true;
+            this.expirationDateBox.Location = new System.Drawing.Point(366, 27);
+            this.expirationDateBox.Name = "expirationDateBox";
+            this.expirationDateBox.Size = new System.Drawing.Size(127, 21);
+            this.expirationDateBox.TabIndex = 60;
+            this.expirationDateBox.SelectedIndexChanged += new System.EventHandler(this.expirationDateBox_SelectedIndexChanged);
             // 
             // tabControl1
             // 
@@ -739,7 +733,7 @@
             this.pharm.Controls.Add(this.comboBox4);
             this.pharm.Controls.Add(this.label8);
             this.pharm.Controls.Add(this.label10);
-            this.pharm.Controls.Add(this.comboBox2);
+            this.pharm.Controls.Add(this.expirationDateBox);
             this.pharm.Controls.Add(this.comboBox3);
             this.pharm.Controls.Add(this.label9);
             this.pharm.Location = new System.Drawing.Point(4, 22);
@@ -881,7 +875,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox expirationDateBox;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage pharm;
         private System.Windows.Forms.TabPage ordres;

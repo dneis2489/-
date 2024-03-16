@@ -6,8 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.Windows.Forms.VisualStyles;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pharmacy
 {
@@ -393,44 +391,6 @@ namespace pharmacy
             Application.Exit();
         }
 
-
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------
-        //ПУСТЫЕ МЕТОДЫ БЕЗ РЕАЛИЗАЦИИ
-        private void textBox6_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pharmacy_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminController_FormClosing(object sender, FormClosingEventArgs e)
         {
             authController.Show();
@@ -475,16 +435,6 @@ namespace pharmacy
                 Console.WriteLine("Сохранение файла отменено.");
             }
             Console.WriteLine("Сохранение файла отменено.");
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

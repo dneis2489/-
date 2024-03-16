@@ -1,17 +1,9 @@
-﻿using MySql.Data.MySqlClient;
-using pharmacy.data;
+﻿using pharmacy.data;
 using pharmacy.service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pharmacy
 {
@@ -608,44 +600,6 @@ namespace pharmacy
         {
             // Завершаем процесс приложения
             Application.Exit();
-        }
-
-
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------
-        //Раздел ПУСТЫЕ МЕТОДЫ БЕЗ РЕАЛИЗАЦИИ
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox10_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void RootController_FormClosing(object sender, FormClosingEventArgs e)

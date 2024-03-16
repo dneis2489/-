@@ -1,21 +1,10 @@
-﻿using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Common;
-using OfficeOpenXml;
-using Org.BouncyCastle.Utilities;
-using pharmacy.data;
+﻿using pharmacy.data;
 using pharmacy.service;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pharmacy
 {
@@ -61,7 +50,7 @@ namespace pharmacy
             dataGridView1.DataSource = dtShop;
             textBox7.TextChanged += textBox7_TextChanged;
             comboBox1.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            expirationDateBox.SelectedIndexChanged += expirationDateBox_SelectedIndexChanged;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
         }
@@ -72,12 +61,12 @@ namespace pharmacy
             dtShop = ShopService.dtShop;
             dataGridView1.DataSource = dtShop;
             textBox7.TextChanged += textBox7_TextChanged;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            expirationDateBox.SelectedIndexChanged += expirationDateBox_SelectedIndexChanged;
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
 
             //Подгрузка сроков годности для фильтров
-            comboBox2.Items.AddRange(ShopService.GetMedicinesExpirationDate().ToArray());
+            expirationDateBox.Items.AddRange(ShopService.GetMedicinesExpirationDate().ToArray());
 
             //Подгрузка производителей для фильтров
             comboBox3.Items.AddRange(ShopService.GetMedicineWithFactory().ToArray());
@@ -123,7 +112,6 @@ namespace pharmacy
             var categories = CategoryService.GetAllName();
             System.Windows.Forms.TextBox textBoxCategory;
             flowLayoutPanel2.Controls.Clear();
-            System.Windows.Forms.TextBox textBoxOrderList;
             flowLayoutPanel2.AutoScroll = true;
 
             var ordersInfos = BasketService.GetOrdersInfosByUserId(User.UserId);
@@ -144,11 +132,11 @@ namespace pharmacy
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по сроку годности
+        private void expirationDateBox_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по сроку годности
         {
-            if (comboBox2.SelectedIndex != -1)
+            if (expirationDateBox.SelectedIndex != -1)
             {
-                string selectedValue = comboBox2.SelectedItem.ToString();
+                string selectedValue = expirationDateBox.SelectedItem.ToString();
                 if (dtShop != null)
                 {
                     DataView dv = new DataView(dtShop);
@@ -212,7 +200,7 @@ namespace pharmacy
 
         private void button5_Click(object sender, EventArgs e) //Товары в магазине - сбросить фильтры
         {
-            comboBox2.SelectedIndex = -1;
+            expirationDateBox.SelectedIndex = -1;
             comboBox3.SelectedIndex = -1;
             comboBox4.SelectedIndex = -1;
             textBox7.Text = "";
@@ -492,11 +480,6 @@ namespace pharmacy
 
         }
 
-        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -506,38 +489,6 @@ namespace pharmacy
 
             authController.Show();
             this.Close();
-        }
-
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------
-        //ПУСТЫЕ МЕТОДЫ БЕЗ РЕАЛИЗАЦИИ
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
