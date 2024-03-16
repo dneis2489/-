@@ -749,6 +749,7 @@
             this.pharm.TabIndex = 0;
             this.pharm.Text = "Лекарства";
             this.pharm.UseVisualStyleBackColor = true;
+            this.pharm.Click += new System.EventHandler(this.pharm_Click);
             // 
             // flowLayoutPanel2
             // 

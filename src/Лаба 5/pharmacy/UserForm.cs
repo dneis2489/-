@@ -451,6 +451,7 @@ namespace pharmacy
             }
         }
 
+        //Кнопка "Экспорт в Excel" у заказа
         private void button7_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -479,6 +480,11 @@ namespace pharmacy
         private void UserController_FormClosing(object sender, FormClosingEventArgs e)
         {
             authController.Show();
+        }
+
+        private void pharm_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void textBox7_TextChanged_1(object sender, EventArgs e)
