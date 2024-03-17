@@ -43,25 +43,25 @@ namespace pharmacy
         private void AdminForm_Load(object sender, EventArgs e)
         {
 
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
-            comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
-            textBox6.TextChanged += textBox6_TextChanged;
+            cmBxExpirationDate.SelectedIndexChanged += cmBxExpirationDate_SelectedIndexChanged;
+            cmBxFactory.SelectedIndexChanged += cmBxFactory_SelectedIndexChanged;
+            cmBxReleaseForm.SelectedIndexChanged += cmBxReleaseForm_SelectedIndexChanged;
+            txtBxFindLine.TextChanged += txtBxFindLine_TextChanged;
 
 
             //Подгрузка срока годности для фильтра в разделе "Лекарства в аптеке"
-            ShopService.GetMedicinesExpirationDate().ForEach(item => comboBox2.Items.Add(item));
+            ShopService.GetMedicinesExpirationDate().ForEach(item => cmBxExpirationDate.Items.Add(item));
 
             //Подгрузка производителей для фильтра в разделе "Лекарства в аптеке"
-            ShopService.GetMedicineWithFactory().ForEach(item => comboBox3.Items.Add(item));
+            ShopService.GetMedicineWithFactory().ForEach(item => cmBxFactory.Items.Add(item));
 
             //Подгрузка формы выпуска для фильтра в разделе "Лекарства в аптеке"
-            ShopService.GetAllReleaseForm().ForEach(item => comboBox4.Items.Add(item));
+            ShopService.GetAllReleaseForm().ForEach(item => cmBxReleaseForm.Items.Add(item));
             
             //Магазин
             ShopService.GetMedicinesInAdmin(User.PharmacyId);
             dtShop = ShopService.dtShop;
-            dataGridView1.DataSource = dtShop;
+            MedicineTable.DataSource = dtShop;
 
             //Заказы
 
@@ -73,7 +73,7 @@ namespace pharmacy
             series.MarkerStyle = MarkerStyle.Circle;
             DataTable dummyData = StatisticsService.AdminGetCountBuyMedicinesStat(User.PharmacyId);
 
-            chart1.Series.Clear();
+            StatChart.Series.Clear();
 
             foreach (DataRow row in dummyData.Rows)
             {
@@ -84,68 +84,68 @@ namespace pharmacy
                 series.Points.AddXY(monthYearDate.ToString("MM.yyyy"), quantity);
             }
 
-            chart1.Series.Add(series);
+            StatChart.Series.Add(series);
 
-            StatusService.GetAllName().ForEach(item => comboBox1.Items.Add(item)); //перенесено из метода TextBox_Admin_Orders_Click
+            StatusService.GetAllName().ForEach(item => cmBxStatusList.Items.Add(item)); //перенесено из метода TextBox_Admin_Orders_Click
         }
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //Раздел ЛЕКАРСТВА В АПТЕКЕ
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по сроку годности
+        private void cmBxExpirationDate_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по сроку годности
         {
-            if (comboBox2.SelectedIndex != -1)
+            if (cmBxExpirationDate.SelectedIndex != -1)
             {
-                string selectedValue = comboBox2.SelectedItem.ToString();
+                string selectedValue = cmBxExpirationDate.SelectedItem.ToString();
                 if (dtShop != null)
                 {
                     DataView dv = new DataView(dtShop);
-                    dv.RowFilter = $"[{dataGridView1.Columns[6].HeaderText}] LIKE '%{selectedValue}%'";
-                    dataGridView1.DataSource = dv;
+                    dv.RowFilter = $"[{MedicineTable.Columns[6].HeaderText}] LIKE '%{selectedValue}%'";
+                    MedicineTable.DataSource = dv;
                 }
 
             }
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по производителю
+        private void cmBxFactory_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по производителю
         {
-            if (comboBox3.SelectedIndex != -1)
+            if (cmBxFactory.SelectedIndex != -1)
             {
-                string selectedValue = comboBox3.SelectedItem.ToString();
+                string selectedValue = cmBxFactory.SelectedItem.ToString();
                 if (dtShop != null)
                 {
                     DataView dv = new DataView(dtShop);
-                    dv.RowFilter = $"[{dataGridView1.Columns[12].HeaderText}] LIKE '%{selectedValue}%'";
-                    dataGridView1.DataSource = dv;
+                    dv.RowFilter = $"[{MedicineTable.Columns[12].HeaderText}] LIKE '%{selectedValue}%'";
+                    MedicineTable.DataSource = dv;
 
                 }
             }
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по форме выпуска
+        private void cmBxReleaseForm_SelectedIndexChanged(object sender, EventArgs e) //Обновление списка лекарств после выбора фильтра по форме выпуска
         {
-            if (comboBox4.SelectedIndex != -1)
+            if (cmBxReleaseForm.SelectedIndex != -1)
             {
-                string selectedValue = comboBox4.SelectedItem.ToString();
+                string selectedValue = cmBxReleaseForm.SelectedItem.ToString();
                 if (dtShop != null)
                 {
                     DataView dv = new DataView(dtShop);
-                    dv.RowFilter = $"[{dataGridView1.Columns[11].HeaderText}] LIKE '%{selectedValue}%'";
-                    dataGridView1.DataSource = dv;
+                    dv.RowFilter = $"[{MedicineTable.Columns[11].HeaderText}] LIKE '%{selectedValue}%'";
+                    MedicineTable.DataSource = dv;
 
                 }
             }
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e) //Обновление списка лекарств после ввода текста с клавиатуры
+        private void txtBxFindLine_TextChanged(object sender, EventArgs e) //Обновление списка лекарств после ввода текста с клавиатуры
         {
-            if (textBox6.Text != "")
+            if (txtBxFindLine.Text != "")
             {
-                string selectedValue = textBox6.Text;
+                string selectedValue = txtBxFindLine.Text;
                 if (dtShop != null)
                 {
                     DataView dv = new DataView(dtShop);
-                    dv.RowFilter = $"[{dataGridView1.Columns[2].HeaderText}] LIKE '%{selectedValue}%'";
-                    dataGridView1.DataSource = dv;
+                    dv.RowFilter = $"[{MedicineTable.Columns[2].HeaderText}] LIKE '%{selectedValue}%'";
+                    MedicineTable.DataSource = dv;
 
                 }
             }
@@ -153,16 +153,16 @@ namespace pharmacy
             {
                 ShopService.GetMedicinesInAdmin(User.PharmacyId);
                 dtShop = ShopService.dtShop;
-                dataGridView1.DataSource = dtShop;
+                MedicineTable.DataSource = dtShop;
             }
         }
 
-        private void button5_Click(object sender, EventArgs e) //Товары в магазине - сбросить фильтры
+        private void btnClearFilter_Click(object sender, EventArgs e) //Товары в магазине - сбросить фильтры
         {
-            comboBox2.SelectedIndex = -1;
-            comboBox3.SelectedIndex = -1;
-            comboBox4.SelectedIndex = -1;
-            textBox6.Text = "";
+            cmBxExpirationDate.SelectedIndex = -1;
+            cmBxFactory.SelectedIndex = -1;
+            cmBxReleaseForm.SelectedIndex = -1;
+            txtBxFindLine.Text = "";
 
             changeDate = false;
             changeFactory = false;
@@ -171,7 +171,7 @@ namespace pharmacy
 
             ShopService.GetMedicinesInAdmin(User.PharmacyId);
             dtShop = ShopService.dtShop;
-            dataGridView1.DataSource = dtShop;
+            MedicineTable.DataSource = dtShop;
         }
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -193,38 +193,38 @@ namespace pharmacy
 
             startIndex = clickedTextBox.Text.IndexOf("Имя заказчика: ") + "Имя заказчика: ".Length;
             endIndex = clickedTextBox.Text.IndexOf(Environment.NewLine, startIndex);
-            textBox1.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
+            txtBxCustomer.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
 
             
 
             startIndex = clickedTextBox.Text.IndexOf("Номер заказа: ") + "Номер заказа: ".Length;
             endIndex = clickedTextBox.Text.IndexOf(Environment.NewLine, startIndex);
-            textBox3.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
+            txtBxOrderNumberId.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
 
             startIndex = clickedTextBox.Text.IndexOf("Дата доставки: ") + "Дата доставки: ".Length;
             endIndex = clickedTextBox.Text.IndexOf(Environment.NewLine, startIndex);
-            textBox4.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
+            txtBxDeliveryDate.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
 
             startIndex = clickedTextBox.Text.IndexOf("Статус заказа: ") + "Статус заказа: ".Length;
             endIndex = clickedTextBox.Text.IndexOf(Environment.NewLine, startIndex);
-            textBox5.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
+            txtBxOrderStatus.Text = clickedTextBox.Text.Substring(startIndex, endIndex - startIndex);
 
-            dataGridView2.DataSource = BasketService.dtBasket;
-            dataGridView2.Columns["id"].Visible = false;
+            OrderTable.DataSource = BasketService.dtBasket;
+            OrderTable.Columns["id"].Visible = false;
 
-            textBox2.Text = dataGridView2.Rows
+            txtBxOrderCost.Text = OrderTable.Rows
             .Cast<DataGridViewRow>()
                 .Sum(row => Convert.ToDecimal(row.Cells["Стоимость:"].Value)).ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e) //Кнопка "Сохранить новый статус" в разделе "Заказы"
+        private void btnSaveStatus_Click(object sender, EventArgs e) //Кнопка "Сохранить новый статус" в разделе "Заказы"
         {
-            if (textBox3.Text != "")
+            if (txtBxOrderNumberId.Text != "")
             {
-                if (comboBox1.SelectedIndex != -1)
+                if (cmBxStatusList.SelectedIndex != -1)
                 {
-                    BasketService.UpdateStatusByNameAndBasketNumber(textBox3.Text, comboBox1.SelectedItem.ToString());
-                    textBox5.Text = comboBox1.SelectedItem.ToString();
+                    BasketService.UpdateStatusByNameAndBasketNumber(txtBxOrderNumberId.Text, cmBxStatusList.SelectedItem.ToString());
+                    txtBxOrderStatus.Text = cmBxStatusList.SelectedItem.ToString();
                     refreshOrderList();
                 }
                 else
@@ -243,8 +243,8 @@ namespace pharmacy
         //Обновление перечня заказов
         private void refreshOrderList()
         {
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.AutoScroll = true;
+            orderListPanel.Controls.Clear();
+            orderListPanel.AutoScroll = true;
             System.Windows.Forms.TextBox textBox;
             List<string> ordersInfos = BasketService.GetOrdersInfosByPharmacyId(User.PharmacyId);
             foreach (var item in ordersInfos)
@@ -260,26 +260,26 @@ namespace pharmacy
 
                 textBox.Click += TextBox_Admin_Orders_Click; // Обработчик события нажатия на текстовое поле
 
-                flowLayoutPanel1.Controls.Add(textBox); // Добавляем TextBox в FlowLayoutPanel
+                orderListPanel.Controls.Add(textBox); // Добавляем TextBox в FlowLayoutPanel
             }
         }
 
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //Раздел СТАТИСТИКА
-        private void button2_Click(object sender, EventArgs e) //Статистика - Количество купленного товара в магазине
+        private void btnStatCountBuyMedInPharm_Click(object sender, EventArgs e) //Статистика - Количество купленного товара в магазине
         {
             dummyData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
+            StatChart.Series.Clear();
+            StatChart.ChartAreas.Clear();
             ChartArea chartArea = new ChartArea();
-            chart1.ChartAreas.Add(chartArea);
+            StatChart.ChartAreas.Add(chartArea);
 
-            chart1.Visible = true;
-            dataGridView3.Visible = false;
+            StatChart.Visible = true;
+            StatTable.Visible = false;
 
 
             Series series = new Series("DataPoints");
@@ -287,7 +287,7 @@ namespace pharmacy
             series.MarkerStyle = MarkerStyle.Circle;
             dummyData = StatisticsService.AdminGetCountBuyMedicinesStat(User.PharmacyId);
 
-            chart1.Series.Clear();
+            StatChart.Series.Clear();
 
             foreach (DataRow row in dummyData.Rows)
             {
@@ -298,29 +298,29 @@ namespace pharmacy
                 series.Points.AddXY(monthYearDate.ToString("MM.yyyy"), quantity);
             }
 
-            chart1.Series.Add(series);
+            StatChart.Series.Add(series);
         }
 
-        private void button3_Click(object sender, EventArgs e) //Статистика - Количество покупок в магазине
+        private void btnStatCountPurchasesInPharmacy_Click(object sender, EventArgs e) //Статистика - Количество покупок в магазине
         {
             dummyData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
+            StatChart.Series.Clear();
+            StatChart.ChartAreas.Clear();
             ChartArea chartArea = new ChartArea();
-            chart1.ChartAreas.Add(chartArea);
+            StatChart.ChartAreas.Add(chartArea);
 
-            chart1.Visible = true;
-            dataGridView3.Visible = false;
+            StatChart.Visible = true;
+            StatTable.Visible = false;
 
             Series series = new Series("DataPoints");
             series.ChartType = SeriesChartType.Line;
             series.MarkerStyle = MarkerStyle.Circle;
             dummyData = StatisticsService.AdminGetCountBasketStat(User.PharmacyId);
 
-            chart1.Series.Clear();
+            StatChart.Series.Clear();
 
             foreach (DataRow row in dummyData.Rows)
             {
@@ -331,24 +331,24 @@ namespace pharmacy
                 series.Points.AddXY(monthYearDate.ToString("MM.yyyy"), quantity);
             }
 
-            chart1.Series.Add(series);
+            StatChart.Series.Add(series);
         }
 
-        private void button4_Click(object sender, EventArgs e) //Рейтинг покупателей
+        private void btnStatTopCustomer_Click(object sender, EventArgs e) //Рейтинг покупателей
         {
             dummyData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Visible = false;
-            dataGridView3.Visible = true;
+            StatChart.Visible = false;
+            StatTable.Visible = true;
             StatisticsService.getTopUsersInPharmacy(User.PharmacyId);
-            dataGridView3.DataSource = StatisticsService.dtStat;
+            StatTable.DataSource = StatisticsService.dtStat;
 
         }
 
         //Экспорт лекарств
-        private void button7_Click(object sender, EventArgs e)
+        private void btnExportMed_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
@@ -359,7 +359,7 @@ namespace pharmacy
             {
                 try
                 {
-                    ExcelExport.ExportDataFromDataTable((DataTable)dataGridView1.DataSource, saveFileDialog, ShopService.dataColumns);
+                    ExcelExport.ExportDataFromDataTable((DataTable)MedicineTable.DataSource, saveFileDialog, ShopService.dataColumns);
                 }
                 catch
                 {
@@ -376,7 +376,7 @@ namespace pharmacy
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //ВЫХОД
-        private void button6_Click(object sender, EventArgs e) //Кнопка ВЫХОД
+        private void btnExit_Click(object sender, EventArgs e) //Кнопка ВЫХОД
         {
             authController.Show();
             this.Close();
@@ -397,7 +397,7 @@ namespace pharmacy
         }
 
         //Экспорт статистики
-        private void button8_Click(object sender, EventArgs e)
+        private void btnExportStat_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
