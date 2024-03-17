@@ -19,7 +19,7 @@ namespace pharmacy
             CategoryService = CategoryService.Instance;
             StatisticsService = StatisticsService.Instance;
             authController = authControl;
-            this.dummyData = new DataTable();
+            this.productSalesData = new DataTable();
         }
 
         private ScheduleService ScheduleService { get; }
@@ -31,19 +31,19 @@ namespace pharmacy
 
         private AuthorizationController authController { get;}
 
-        private DataTable dummyData;
+        private DataTable productSalesData;
 
         private void ClearFormBeforeLoading()
         {
             //Вкладка добавить данные
-            comboBox1.Items.Clear();
-            comboBox2.Items.Clear();
-            comboBox3.Items.Clear();
-            comboBox4.Items.Clear();
-            comboBox5.Items.Clear();
-            comboBox6.Items.Clear();
-            comboBox7.Items.Clear();
-            comboBox8.Items.Clear();
+            cmbBxSchedulePhramacy.Items.Clear();
+            cmbBxSystemRole.Items.Clear();
+            cmbBxLinkedPharmacy.Items.Clear();
+            cmbBxDeletePharmacyName.Items.Clear();
+            cmbBxDeleteWorkScheduleName.Items.Clear();
+            cmbBxDeleteUserFullName.Items.Clear();
+            cmbBxDeleteOrderStatusName.Items.Clear();
+            cmbBxDeleteCategoryName.Items.Clear();
         }
 
         private void RootForm1_Load(object sender, EventArgs e)
@@ -52,57 +52,57 @@ namespace pharmacy
             ClearFormBeforeLoading();
             
             //Подгрузка графиков работ для добавления Магазина
-            ScheduleService.GetAll().ForEach(item => comboBox1.Items.Add(item));
+            ScheduleService.GetAll().ForEach(item => cmbBxSchedulePhramacy.Items.Add(item));
 
             //Подгрузка системных ролей и магазинов для добавления пользователя
             var pharmacies = PharmacyService.GetAll();
-            UsersService.GetAllRoles().ForEach(item => comboBox2.Items.Add(item));            
-            pharmacies.ForEach(item => comboBox3.Items.Add(item));
+            UsersService.GetAllRoles().ForEach(item => cmbBxSystemRole.Items.Add(item));            
+            pharmacies.ForEach(item => cmbBxLinkedPharmacy.Items.Add(item));
 
             //Вкладка удалить данные
             //Магазины
-            pharmacies.ForEach(item => comboBox4.Items.Add(item));
+            pharmacies.ForEach(item => cmbBxDeletePharmacyName.Items.Add(item));
 
             //Графики
-            ScheduleService.GetAll().ForEach(item => comboBox5.Items.Add(item));
+            ScheduleService.GetAll().ForEach(item => cmbBxDeleteWorkScheduleName.Items.Add(item));
 
             //Пользователи            
-            UsersService.GetAll().ForEach(item => comboBox6.Items.Add(item));
+            UsersService.GetAll().ForEach(item => cmbBxDeleteUserFullName.Items.Add(item));
 
             //Статусы            
-            StatusService.GetAll().ForEach(item => comboBox7.Items.Add(item));
+            StatusService.GetAll().ForEach(item => cmbBxDeleteOrderStatusName.Items.Add(item));
 
             //Категории            
-            CategoryService.GetAll().ForEach(item => comboBox8.Items.Add(item));           
+            CategoryService.GetAll().ForEach(item => cmbBxDeleteCategoryName.Items.Add(item));           
 
             //Вкладка статусы
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = false;
-            chart1.Visible = true;
+            rootPharmaciesStatisticsTable.Visible = false;
+            rootMedicinesStatisticsTable.Visible = false;
+            rootRevenueChart.Visible = true;
             
         }
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //Раздел ДОБАВИТЬ ДАННЫЕ
-        private void button1_Click(object sender, EventArgs e) //Добавить магазин - Добавить
+        private void btnAddPharmacy_Click(object sender, EventArgs e) //Добавить магазин - Добавить
         {
-            if (!Equals(comboBox1.SelectedItem, "") && textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
+            if (!Equals(cmbBxSchedulePhramacy.SelectedItem, "") && txtBxPhramacyName.Text != "" && txtBxPhramacyAddress.Text != "" && txtBxPhramacyPhoneNumber.Text != "")
             {
-                string choice = comboBox1.SelectedItem.ToString();
+                string choice = cmbBxSchedulePhramacy.SelectedItem.ToString();
                 char id = choice[0];
                 int sheduleId = Int32.Parse(id.ToString());
 
-                PharmacyService.Add(textBox1.Text, textBox2.Text, textBox3.Text, sheduleId);
+                PharmacyService.Add(txtBxPhramacyName.Text, txtBxPhramacyAddress.Text, txtBxPhramacyPhoneNumber.Text, sheduleId);
 
-                comboBox1.SelectedIndex = -1;
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                comboBox4.Items.Clear();
-                comboBox3.Items.Clear();
+                cmbBxSchedulePhramacy.SelectedIndex = -1;
+                txtBxPhramacyName.Text = "";
+                txtBxPhramacyAddress.Text = "";
+                txtBxPhramacyPhoneNumber.Text = "";
+                cmbBxDeletePharmacyName.Items.Clear();
+                cmbBxLinkedPharmacy.Items.Clear();
                 var pharmacies = PharmacyService.GetAll();
-                pharmacies.ForEach(item => comboBox4.Items.Add(item));
-                pharmacies.ForEach(item => comboBox3.Items.Add(item));
+                pharmacies.ForEach(item => cmbBxDeletePharmacyName.Items.Add(item));
+                pharmacies.ForEach(item => cmbBxLinkedPharmacy.Items.Add(item));
             }
             else
             {
@@ -110,22 +110,22 @@ namespace pharmacy
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)//Добавить магазин - Отчистить
+        private void btnClearPharmacy_Click(object sender, EventArgs e)//Добавить магазин - Отчистить
         {
-            comboBox1.SelectedIndex = -1;
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
+            cmbBxSchedulePhramacy.SelectedIndex = -1;
+            txtBxPhramacyName.Text = "";
+            txtBxPhramacyAddress.Text = "";
+            txtBxPhramacyPhoneNumber.Text = "";
         }
 
-        private void button4_Click(object sender, EventArgs e) //Добавить категорию - Добавить
+        private void btnAddCategory_Click(object sender, EventArgs e) //Добавить категорию - Добавить
         {
-            if (textBox5.Text != "")
+            if (txtBxCategoryName.Text != "")
             {
-                CategoryService.Add(textBox5.Text);
-                textBox5.Text = "";
-                comboBox8.Items.Clear();
-                CategoryService.GetAll().ForEach(item => comboBox8.Items.Add(item));
+                CategoryService.Add(txtBxCategoryName.Text);
+                txtBxCategoryName.Text = "";
+                cmbBxDeleteCategoryName.Items.Clear();
+                CategoryService.GetAll().ForEach(item => cmbBxDeleteCategoryName.Items.Add(item));
             }
             else
             {
@@ -133,24 +133,24 @@ namespace pharmacy
             }
         }
 
-        private void button3_Click(object sender, EventArgs e) //Добавить категорию - Отчистить
+        private void btnClearCategory_Click(object sender, EventArgs e) //Добавить категорию - Отчистить
         {
-            textBox5.Text = "";
+            txtBxCategoryName.Text = "";
         }
 
-        private void button6_Click(object sender, EventArgs e) // Добавить график работы - Добавить
+        private void btnAddSchedule_Click(object sender, EventArgs e) // Добавить график работы - Добавить
         {
-            if (textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "")
+            if (txtBxStartOnWeekdays.Text != "" && txtBxEndOnWeekdays.Text != "" && txtBxStartOnWeekend.Text != "" && txtBxEndOnWeekend.Text != "")
             {
-                ScheduleService.Add(textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text);
-                textBox6.Text = "";
-                textBox7.Text = "";
-                textBox8.Text = "";
-                textBox9.Text = "";
-                comboBox1.Items.Clear();
-                comboBox5.Items.Clear();
-                ScheduleService.GetAll().ForEach(item => comboBox1.Items.Add(item));
-                ScheduleService.GetAll().ForEach(item => comboBox5.Items.Add(item));
+                ScheduleService.Add(txtBxStartOnWeekdays.Text, txtBxEndOnWeekdays.Text, txtBxStartOnWeekend.Text, txtBxEndOnWeekend.Text);
+                txtBxStartOnWeekdays.Text = "";
+                txtBxEndOnWeekdays.Text = "";
+                txtBxStartOnWeekend.Text = "";
+                txtBxEndOnWeekend.Text = "";
+                cmbBxSchedulePhramacy.Items.Clear();
+                cmbBxDeleteWorkScheduleName.Items.Clear();
+                ScheduleService.GetAll().ForEach(item => cmbBxSchedulePhramacy.Items.Add(item));
+                ScheduleService.GetAll().ForEach(item => cmbBxDeleteWorkScheduleName.Items.Add(item));
             }
             else
             {
@@ -158,22 +158,22 @@ namespace pharmacy
             }
         }
 
-        private void button5_Click(object sender, EventArgs e) // Добавить график работы - Отчитстить
+        private void btnClearSchedule_Click(object sender, EventArgs e) // Добавить график работы - Отчитстить
         {
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            textBox9.Text = "";
+            txtBxStartOnWeekdays.Text = "";
+            txtBxEndOnWeekdays.Text = "";
+            txtBxStartOnWeekend.Text = "";
+            txtBxEndOnWeekend.Text = "";
         }
 
-        private void button8_Click(object sender, EventArgs e)//Добавить статус - Добавить
+        private void btnAddOrderStatus_Click(object sender, EventArgs e)//Добавить статус - Добавить
         {
-            if (textBox10.Text != "")
+            if (txtBxStatusName.Text != "")
             {
-                StatusService.Add(textBox10.Text);
-                textBox10.Text = "";
-                comboBox7.Items.Clear();
-                StatusService.GetAll().ForEach(item => comboBox7.Items.Add(item));
+                StatusService.Add(txtBxStatusName.Text);
+                txtBxStatusName.Text = "";
+                cmbBxDeleteOrderStatusName.Items.Clear();
+                StatusService.GetAll().ForEach(item => cmbBxDeleteOrderStatusName.Items.Add(item));
             }
             else
             {
@@ -181,43 +181,43 @@ namespace pharmacy
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)//Добавить статус - Отчистить
+        private void btnClearOrderStatus_Click(object sender, EventArgs e)//Добавить статус - Отчистить
         {
-            textBox10.Text = "";
+            txtBxStatusName.Text = "";
         }
 
-        private void button10_Click(object sender, EventArgs e) //Добавить пользователей - Добавить
+        private void btnAddUser_Click(object sender, EventArgs e) //Добавить пользователей - Добавить
         {
-            if (textBox4.Text != "" && textBox11.Text != "" && textBox12.Text != "" && textBox13.Text != "" && textBox14.Text != "" && textBox15.Text != "" &&
-                !Equals(comboBox2.SelectedItem, ""))
+            if (txtBxFullName.Text != "" && txtBxBirthDate.Text != "" && txtBxPhoneNumber.Text != "" && txtBxLogin.Text != "" && txtBxPassword.Text != "" && txtBxRetypePassword.Text != "" &&
+                !Equals(cmbBxSystemRole.SelectedItem, ""))
             {
-                if (textBox14.Text == textBox15.Text && ((comboBox2.SelectedItem.ToString() == "Администратор" && comboBox3.SelectedIndex != -1) || (comboBox2.SelectedItem.ToString() != "Администратор")))
+                if (txtBxPassword.Text == txtBxRetypePassword.Text && ((cmbBxSystemRole.SelectedItem.ToString() == "Администратор" && cmbBxLinkedPharmacy.SelectedIndex != -1) || (cmbBxSystemRole.SelectedItem.ToString() != "Администратор")))
                 {
                     
-                    string choiceRole = comboBox2.SelectedItem.ToString();
+                    string choiceRole = cmbBxSystemRole.SelectedItem.ToString();
                     char role = choiceRole[0];
                     int roleId = Int32.Parse(role.ToString());
-                    if (comboBox2.SelectedItem.ToString() == "2. Администратор" && comboBox3.SelectedIndex != -1)
+                    if (cmbBxSystemRole.SelectedItem.ToString() == "2. Администратор" && cmbBxLinkedPharmacy.SelectedIndex != -1)
                     {
-                        string choicePharm = comboBox3.SelectedItem.ToString();
+                        string choicePharm = cmbBxLinkedPharmacy.SelectedItem.ToString();
                         char pharm = choicePharm[0];
                         int pharmId = Int32.Parse(pharm.ToString());
-                        UsersService.AddUser(textBox4.Text, textBox11.Text, textBox12.Text, textBox13.Text, textBox14.Text, roleId, pharmId);
+                        UsersService.AddUser(txtBxFullName.Text, txtBxBirthDate.Text, txtBxPhoneNumber.Text, txtBxLogin.Text, txtBxPassword.Text, roleId, pharmId);
                     }
                     else
                     {
-                        UsersService.AddUser(textBox4.Text, textBox11.Text, textBox12.Text, textBox13.Text, textBox14.Text, roleId, 0);
+                        UsersService.AddUser(txtBxFullName.Text, txtBxBirthDate.Text, txtBxPhoneNumber.Text, txtBxLogin.Text, txtBxPassword.Text, roleId, 0);
                     }
-                    textBox4.Text = "";
-                    textBox11.Text = "";
-                    textBox12.Text = "";
-                    textBox13.Text = "";
-                    textBox14.Text = "";
-                    textBox15.Text = "";
-                    comboBox2.SelectedIndex = -1;
-                    comboBox3.SelectedIndex = -1;
-                    comboBox6.Items.Clear();
-                    UsersService.GetAll().ForEach(item => comboBox6.Items.Add(item));
+                    txtBxFullName.Text = "";
+                    txtBxBirthDate.Text = "";
+                    txtBxPhoneNumber.Text = "";
+                    txtBxLogin.Text = "";
+                    txtBxPassword.Text = "";
+                    txtBxRetypePassword.Text = "";
+                    cmbBxSystemRole.SelectedIndex = -1;
+                    cmbBxLinkedPharmacy.SelectedIndex = -1;
+                    cmbBxDeleteUserFullName.Items.Clear();
+                    UsersService.GetAll().ForEach(item => cmbBxDeleteUserFullName.Items.Add(item));
                 }
                 else
                 {
@@ -230,27 +230,27 @@ namespace pharmacy
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)//Добавить пользователей - Отчистить
+        private void btnClearUser_Click(object sender, EventArgs e)//Добавить пользователей - Отчистить
         {
-            textBox4.Text = "";
-            textBox11.Text = "";
-            textBox12.Text = "";
-            textBox13.Text = "";
-            textBox14.Text = "";
-            textBox15.Text = "";
-            comboBox2.SelectedIndex = -1;
-            comboBox3.SelectedIndex = -1;
+            txtBxFullName.Text = "";
+            txtBxBirthDate.Text = "";
+            txtBxPhoneNumber.Text = "";
+            txtBxLogin.Text = "";
+            txtBxPassword.Text = "";
+            txtBxRetypePassword.Text = "";
+            cmbBxSystemRole.SelectedIndex = -1;
+            cmbBxLinkedPharmacy.SelectedIndex = -1;
 
         }
 
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //Раздел УДАЛИТЬ ДАННЫЕ
-        private void button12_Click(object sender, EventArgs e) //Удалить Магазин - Удалить
+        private void btnDeletePharmacy_Click(object sender, EventArgs e) //Удалить Магазин - Удалить
         {
-            if (comboBox4.SelectedIndex != -1)
+            if (cmbBxDeletePharmacyName.SelectedIndex != -1)
             {
-                string choice = comboBox4.SelectedItem.ToString();
+                string choice = cmbBxDeletePharmacyName.SelectedItem.ToString();
                 string[] parts = choice.Split('.');
                 int pharmId = Int32.Parse(parts[0].ToString());
                 if(pharmId == 1)
@@ -261,12 +261,12 @@ namespace pharmacy
                 {
                     PharmacyService.Delete(pharmId);
                 }
-                comboBox4.SelectedIndex = -1;
-                comboBox4.Items.Clear();
-                comboBox3.Items.Clear();
+                cmbBxDeletePharmacyName.SelectedIndex = -1;
+                cmbBxDeletePharmacyName.Items.Clear();
+                cmbBxLinkedPharmacy.Items.Clear();
                 var pharmacies = PharmacyService.GetAll();
-                pharmacies.ForEach(item => comboBox4.Items.Add(item));
-                pharmacies.ForEach(item => comboBox3.Items.Add(item));
+                pharmacies.ForEach(item => cmbBxDeletePharmacyName.Items.Add(item));
+                pharmacies.ForEach(item => cmbBxLinkedPharmacy.Items.Add(item));
 
 
             }
@@ -276,16 +276,16 @@ namespace pharmacy
             }
         }
 
-        private void button11_Click(object sender, EventArgs e) //Удалить Магазин - Отчистить
+        private void btnDeletePharmacyClear_Click(object sender, EventArgs e) //Удалить Магазин - Отчистить
         {
-            comboBox4.SelectedIndex = -1;
+            cmbBxDeletePharmacyName.SelectedIndex = -1;
         }
 
-        private void button14_Click(object sender, EventArgs e) //Удалить График работы - Удалить
+        private void btnDeleteWorkSchedule_Click(object sender, EventArgs e) //Удалить График работы - Удалить
         {
-            if (comboBox5.SelectedIndex != -1)
+            if (cmbBxDeleteWorkScheduleName.SelectedIndex != -1)
             {
-                string choice = comboBox5.SelectedItem.ToString();
+                string choice = cmbBxDeleteWorkScheduleName.SelectedItem.ToString();
                 string[] parts = choice.Split('.');
                 int cheduleId = Int32.Parse(parts[0].ToString());
                 if (cheduleId == 1)
@@ -296,11 +296,11 @@ namespace pharmacy
                 {
                     ScheduleService.Delete(cheduleId);
                 }
-                comboBox5.SelectedIndex = -1;
-                comboBox1.Items.Clear();
-                comboBox5.Items.Clear();
-                ScheduleService.GetAll().ForEach(item => comboBox1.Items.Add(item));
-                ScheduleService.GetAll().ForEach(item => comboBox5.Items.Add(item));
+                cmbBxDeleteWorkScheduleName.SelectedIndex = -1;
+                cmbBxSchedulePhramacy.Items.Clear();
+                cmbBxDeleteWorkScheduleName.Items.Clear();
+                ScheduleService.GetAll().ForEach(item => cmbBxSchedulePhramacy.Items.Add(item));
+                ScheduleService.GetAll().ForEach(item => cmbBxDeleteWorkScheduleName.Items.Add(item));
             }
             else
             {
@@ -308,16 +308,16 @@ namespace pharmacy
             }
         }
 
-        private void button13_Click(object sender, EventArgs e) //Удалить График работы - Отчистить
+        private void btnDeleteWorkScheduleClear_Click(object sender, EventArgs e) //Удалить График работы - Отчистить
         {
-            comboBox5.SelectedIndex = -1;
+            cmbBxDeleteWorkScheduleName.SelectedIndex = -1;
         }
 
-        private void button16_Click(object sender, EventArgs e) //Удалить Пользователя - Удалить
+        private void btnDeleteUser_Click(object sender, EventArgs e) //Удалить Пользователя - Удалить
         {
-            if (comboBox6.SelectedIndex != -1)
+            if (cmbBxDeleteUserFullName.SelectedIndex != -1)
             {
-                string choice = comboBox6.SelectedItem.ToString();
+                string choice = cmbBxDeleteUserFullName.SelectedItem.ToString();
                 string[] parts = choice.Split('.');
                 int userId = Int32.Parse(parts[0].ToString());
                 if (userId == 1)
@@ -329,9 +329,9 @@ namespace pharmacy
                     UsersService.Delete(userId);
                 }
 
-                comboBox6.SelectedIndex = -1;
-                comboBox6.Items.Clear();
-                UsersService.GetAll().ForEach(item => comboBox6.Items.Add(item));
+                cmbBxDeleteUserFullName.SelectedIndex = -1;
+                cmbBxDeleteUserFullName.Items.Clear();
+                UsersService.GetAll().ForEach(item => cmbBxDeleteUserFullName.Items.Add(item));
             }
             else
             {
@@ -339,16 +339,16 @@ namespace pharmacy
             }
         }
 
-        private void button15_Click(object sender, EventArgs e) //Удалить Пользователя - Отчистить
+        private void btnDeleteUserClear_Click(object sender, EventArgs e) //Удалить Пользователя - Отчистить
         {
-            comboBox6.SelectedIndex = -1;
+            cmbBxDeleteUserFullName.SelectedIndex = -1;
         }
 
-        private void button18_Click(object sender, EventArgs e) //Удалить Статус - Удалить 
+        private void btnDeleteOrderStatus_Click(object sender, EventArgs e) //Удалить Статус - Удалить 
         {
-            if (comboBox7.SelectedIndex != -1)
+            if (cmbBxDeleteOrderStatusName.SelectedIndex != -1)
             {
-                string choice = comboBox7.SelectedItem.ToString();
+                string choice = cmbBxDeleteOrderStatusName.SelectedItem.ToString();
                 string[] parts = choice.Split('.');
                 int statId = Int32.Parse(parts[0].ToString());
 
@@ -360,9 +360,9 @@ namespace pharmacy
                 {
                     StatusService.Delete(statId);
                 }
-                comboBox7.SelectedIndex = -1;
-                comboBox7.Items.Clear();
-                StatusService.GetAll().ForEach(item => comboBox7.Items.Add(item));
+                cmbBxDeleteOrderStatusName.SelectedIndex = -1;
+                cmbBxDeleteOrderStatusName.Items.Clear();
+                StatusService.GetAll().ForEach(item => cmbBxDeleteOrderStatusName.Items.Add(item));
                 
             }
             else
@@ -371,16 +371,16 @@ namespace pharmacy
             }
         }
 
-        private void button17_Click(object sender, EventArgs e) //Удалить Статус - Отчистить
+        private void btnDeleteOrderStatusClear_Click(object sender, EventArgs e) //Удалить Статус - Отчистить
         {
-            comboBox7.SelectedIndex = -1;
+            cmbBxDeleteOrderStatusName.SelectedIndex = -1;
         }
 
-        private void button20_Click(object sender, EventArgs e) //Удалить Категорию - Удалить 
+        private void btnDeleteCategory_Click(object sender, EventArgs e) //Удалить Категорию - Удалить 
         {
-            if (comboBox8.SelectedIndex != -1)
+            if (cmbBxDeleteCategoryName.SelectedIndex != -1)
             {
-                string choice = comboBox8.SelectedItem.ToString();
+                string choice = cmbBxDeleteCategoryName.SelectedItem.ToString();
                 string[] parts = choice.Split('.');
                 int catId = Int32.Parse(parts[0].ToString());
                 if (catId == 1)
@@ -391,9 +391,9 @@ namespace pharmacy
                 {
                     CategoryService.Delete(catId);
                 }
-                comboBox8.SelectedIndex = -1;
-                comboBox8.Items.Clear();
-                CategoryService.GetAll().ForEach(item => comboBox8.Items.Add(item));
+                cmbBxDeleteCategoryName.SelectedIndex = -1;
+                cmbBxDeleteCategoryName.Items.Clear();
+                CategoryService.GetAll().ForEach(item => cmbBxDeleteCategoryName.Items.Add(item));
                 
             }
             else
@@ -402,37 +402,37 @@ namespace pharmacy
             }
         }
 
-        private void button19_Click(object sender, EventArgs e) //Удалить Категорию - Отчистить
+        private void btnDeleteCategoryClear_Click(object sender, EventArgs e) //Удалить Категорию - Отчистить
         {
-            comboBox8.SelectedItem = "";
+            cmbBxDeleteCategoryName.SelectedItem = "";
         }
 
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //Раздел СТАТИСТИКА
-        private void button24_Click(object sender, EventArgs e) //Статистика - Количество проданной продукции
+        private void btnNumberProductSold_Click(object sender, EventArgs e) //Статистика - Количество проданной продукции
         {
-            dummyData.Clear();
+            productSalesData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
+            rootRevenueChart.Series.Clear();
+            rootRevenueChart.ChartAreas.Clear();
             ChartArea chartArea = new ChartArea();
-            chart1.ChartAreas.Add(chartArea);
+            rootRevenueChart.ChartAreas.Add(chartArea);
 
-            chart1.Visible = true;
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = false;
+            rootRevenueChart.Visible = true;
+            rootPharmaciesStatisticsTable.Visible = false;
+            rootMedicinesStatisticsTable.Visible = false;
             Series series = new Series("DataPoints");
             series.ChartType = SeriesChartType.Line;
             series.MarkerStyle = MarkerStyle.Circle;
-            dummyData.Clear();
-            dummyData = StatisticsService.RootGetCountBuyMedicinesStat();
+            productSalesData.Clear();
+            productSalesData = StatisticsService.RootGetCountBuyMedicinesStat();
 
 
 
-            foreach (DataRow row in dummyData.Rows)
+            foreach (DataRow row in productSalesData.Rows)
             {
                 DateTime date = (DateTime)row["Дата"];
                 int quantity = (int)row["Значение"];
@@ -442,32 +442,32 @@ namespace pharmacy
             }
 
 
-            chart1.Series.Add(series);
+            rootRevenueChart.Series.Add(series);
         }
 
-        private void button22_Click(object sender, EventArgs e) //Статистика - Количество заказов
+        private void btnNumberOrders_Click(object sender, EventArgs e) //Статистика - Количество заказов
         {
-            dummyData.Clear();
+            productSalesData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
+            rootRevenueChart.Series.Clear();
+            rootRevenueChart.ChartAreas.Clear();
             ChartArea chartArea = new ChartArea();
-            chart1.ChartAreas.Add(chartArea);
+            rootRevenueChart.ChartAreas.Add(chartArea);
 
-            chart1.Visible = true;
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = false;
+            rootRevenueChart.Visible = true;
+            rootPharmaciesStatisticsTable.Visible = false;
+            rootMedicinesStatisticsTable.Visible = false;
             Series series = new Series("DataPoints");
             series.ChartType = SeriesChartType.Line;
             series.MarkerStyle = MarkerStyle.Circle;
-            dummyData.Clear();
-            dummyData = StatisticsService.RootGetCountBasketStat();
+            productSalesData.Clear();
+            productSalesData = StatisticsService.RootGetCountBasketStat();
 
-            chart1.Series.Clear();
+            rootRevenueChart.Series.Clear();
 
-            foreach (DataRow row in dummyData.Rows)
+            foreach (DataRow row in productSalesData.Rows)
             {
                 DateTime date = (DateTime)row["Дата"];
                 int quantity = (int)row["Значение"];
@@ -476,60 +476,60 @@ namespace pharmacy
                 series.Points.AddXY(monthYearDate.ToString("MM.yyyy"), quantity);
             }
 
-            chart1.Series.Add(series);
+            rootRevenueChart.Series.Add(series);
         }
 
-        private void button23_Click(object sender, EventArgs e) //Статистика - Рейтинг магазинов
+        private void btnTopPharmacies_Click(object sender, EventArgs e) //Статистика - Рейтинг магазинов
         {
-            dummyData.Clear();
+            productSalesData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Visible = false;
-            dataGridView1.Visible = true;
-            dataGridView2.Visible = false;
+            rootRevenueChart.Visible = false;
+            rootPharmaciesStatisticsTable.Visible = true;
+            rootMedicinesStatisticsTable.Visible = false;
             StatisticsService.GetTopPharmacy();
-            dataGridView1.DataSource = StatisticsService.dtStat;
+            rootPharmaciesStatisticsTable.DataSource = StatisticsService.dtStat;
         }
 
 
-        private void button25_Click(object sender, EventArgs e) //Рейтинг лекарств
+        private void btnTopMedicines_Click(object sender, EventArgs e) //Рейтинг лекарств
         {
-            dummyData.Clear();
+            productSalesData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Visible = false;
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = true;
+            rootRevenueChart.Visible = false;
+            rootPharmaciesStatisticsTable.Visible = false;
+            rootMedicinesStatisticsTable.Visible = true;
 
             StatisticsService.GetTopMedicines();
 
-            dataGridView2.DataSource = StatisticsService.dtStat2;
+            rootMedicinesStatisticsTable.DataSource = StatisticsService.dtStat2;
         }
 
-        private void button21_Click(object sender, EventArgs e) //Статистика - Доходы
+        private void btnRevenue_Click(object sender, EventArgs e) //Статистика - Доходы
         {
-            dummyData.Clear();
+            productSalesData.Clear();
             StatisticsService.dtStat.Clear();
             StatisticsService.dtStat2.Clear();
 
-            chart1.Series.Clear();
-            chart1.ChartAreas.Clear();
+            rootRevenueChart.Series.Clear();
+            rootRevenueChart.ChartAreas.Clear();
             ChartArea chartArea = new ChartArea();
-            chart1.ChartAreas.Add(chartArea);
+            rootRevenueChart.ChartAreas.Add(chartArea);
 
-            chart1.Visible = true;
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = false;
+            rootRevenueChart.Visible = true;
+            rootPharmaciesStatisticsTable.Visible = false;
+            rootMedicinesStatisticsTable.Visible = false;
             Series series = new Series("DataPoints");
             series.ChartType = SeriesChartType.Line;
             series.MarkerStyle = MarkerStyle.Circle;
-            dummyData = StatisticsService.RootGetRevenueByMonth();
+            productSalesData = StatisticsService.RootGetRevenueByMonth();
 
-            chart1.Series.Clear();
+            rootRevenueChart.Series.Clear();
 
-            foreach (DataRow row in dummyData.Rows)
+            foreach (DataRow row in productSalesData.Rows)
             {
                 DateTime date = (DateTime)row["Дата"];
                 int quantity = (int)row["Значение"];
@@ -538,14 +538,14 @@ namespace pharmacy
                 series.Points.AddXY(monthYearDate.ToString("MM.yyyy"), quantity);
             }
 
-            chart1.Series.Add(series);
+            rootRevenueChart.Series.Add(series);
         }
 
 
 
 
         //Экспорт
-        private void button26_Click(object sender, EventArgs e)
+        private void btnExcelExport_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
@@ -558,9 +558,9 @@ namespace pharmacy
             {
                 try
                 {
-                    if (dummyData.Rows.Count != 0)
+                    if (productSalesData.Rows.Count != 0)
                     {
-                        exportData = dummyData;
+                        exportData = productSalesData;
                     }
                     else if (StatisticsService.dtStat.Rows.Count != 0)
                     {
@@ -587,7 +587,7 @@ namespace pharmacy
 
         //-----------------------------------------------------------------------------------------------------------------------------------------------------
         //Раздел ВЫХОД
-        private void button27_Click(object sender, EventArgs e) //Кнопка "Выход"
+        private void btnExit_Click(object sender, EventArgs e) //Кнопка "Выход"
         {
             authController.Show();
             this.Close();

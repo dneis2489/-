@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBxPhramacyName = new System.Windows.Forms.TextBox();
+            this.txtBxPhramacyAddress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBxPhramacyPhoneNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBxCategoryName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtBxStartOnWeekdays = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBxEndOnWeekdays = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtBxStartOnWeekend = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtBxEndOnWeekend = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBxStatusName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.cmbBxSchedulePhramacy = new System.Windows.Forms.ComboBox();
+            this.btnAddPharmacy = new System.Windows.Forms.Button();
+            this.btnClearPharmacy = new System.Windows.Forms.Button();
+            this.btnClearCategory = new System.Windows.Forms.Button();
+            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.btnClearSchedule = new System.Windows.Forms.Button();
+            this.btnAddSchedule = new System.Windows.Forms.Button();
+            this.btnClearOrderStatus = new System.Windows.Forms.Button();
+            this.btnAddOrderStatus = new System.Windows.Forms.Button();
+            this.txtBxRetypePassword = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbBxLinkedPharmacy = new System.Windows.Forms.ComboBox();
+            this.cmbBxSystemRole = new System.Windows.Forms.ComboBox();
+            this.txtBxPassword = new System.Windows.Forms.TextBox();
+            this.txtBxLogin = new System.Windows.Forms.TextBox();
+            this.txtBxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtBxBirthDate = new System.Windows.Forms.TextBox();
+            this.txtBxFullName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -75,36 +75,40 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.btnClearUser = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
+            this.cmbBxDeletePharmacyName = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbBxDeleteWorkScheduleName = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cmbBxDeleteUserFullName = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbBxDeleteOrderStatusName = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cmbBxDeleteCategoryName = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button25 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnDeletePharmacyClear = new System.Windows.Forms.Button();
+            this.btnDeletePharmacy = new System.Windows.Forms.Button();
+            this.btnDeleteWorkScheduleClear = new System.Windows.Forms.Button();
+            this.btnDeleteWorkSchedule = new System.Windows.Forms.Button();
+            this.btnDeleteUserClear = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnDeleteOrderStatusClear = new System.Windows.Forms.Button();
+            this.btnDeleteOrderStatus = new System.Windows.Forms.Button();
+            this.btnDeleteCategoryClear = new System.Windows.Forms.Button();
+            this.btnDeleteCategory = new System.Windows.Forms.Button();
+            this.btnRevenue = new System.Windows.Forms.Button();
+            this.btnNumberOrders = new System.Windows.Forms.Button();
+            this.btnTopPharmacies = new System.Windows.Forms.Button();
+            this.btnNumberProductSold = new System.Windows.Forms.Button();
+            this.rootRevenueChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnTopMedicines = new System.Windows.Forms.Button();
+            this.rootPharmaciesStatisticsTable = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rootMedicinesStatisticsTable = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.add = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -119,16 +123,12 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.statist = new System.Windows.Forms.TabPage();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btnExcelExport = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button27 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btnExit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.rootRevenueChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootPharmaciesStatisticsTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootMedicinesStatisticsTable)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.add.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -155,19 +155,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ФИО:";
             // 
-            // textBox1
+            // txtBxPhramacyName
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBxPhramacyName.Location = new System.Drawing.Point(7, 51);
+            this.txtBxPhramacyName.Name = "txtBxPhramacyName";
+            this.txtBxPhramacyName.Size = new System.Drawing.Size(220, 20);
+            this.txtBxPhramacyName.TabIndex = 2;
             // 
-            // textBox2
+            // txtBxPhramacyAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(7, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtBxPhramacyAddress.Location = new System.Drawing.Point(7, 101);
+            this.txtBxPhramacyAddress.Name = "txtBxPhramacyAddress";
+            this.txtBxPhramacyAddress.Size = new System.Drawing.Size(220, 20);
+            this.txtBxPhramacyAddress.TabIndex = 5;
             // 
             // label3
             // 
@@ -178,12 +178,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Адрес:";
             // 
-            // textBox3
+            // txtBxPhramacyPhoneNumber
             // 
-            this.textBox3.Location = new System.Drawing.Point(7, 153);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtBxPhramacyPhoneNumber.Location = new System.Drawing.Point(7, 153);
+            this.txtBxPhramacyPhoneNumber.Name = "txtBxPhramacyPhoneNumber";
+            this.txtBxPhramacyPhoneNumber.Size = new System.Drawing.Size(220, 20);
+            this.txtBxPhramacyPhoneNumber.TabIndex = 7;
             // 
             // label4
             // 
@@ -203,12 +203,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "График работы:";
             // 
-            // textBox5
+            // txtBxCategoryName
             // 
-            this.textBox5.Location = new System.Drawing.Point(10, 52);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 20);
-            this.textBox5.TabIndex = 11;
+            this.txtBxCategoryName.Location = new System.Drawing.Point(10, 52);
+            this.txtBxCategoryName.Name = "txtBxCategoryName";
+            this.txtBxCategoryName.Size = new System.Drawing.Size(221, 20);
+            this.txtBxCategoryName.TabIndex = 11;
             // 
             // label6
             // 
@@ -219,12 +219,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Наименование:";
             // 
-            // textBox6
+            // txtBxStartOnWeekdays
             // 
-            this.textBox6.Location = new System.Drawing.Point(6, 51);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtBxStartOnWeekdays.Location = new System.Drawing.Point(6, 51);
+            this.txtBxStartOnWeekdays.Name = "txtBxStartOnWeekdays";
+            this.txtBxStartOnWeekdays.Size = new System.Drawing.Size(220, 20);
+            this.txtBxStartOnWeekdays.TabIndex = 13;
             // 
             // label7
             // 
@@ -235,12 +235,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Начало работы в будни:";
             // 
-            // textBox7
+            // txtBxEndOnWeekdays
             // 
-            this.textBox7.Location = new System.Drawing.Point(6, 101);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(220, 20);
-            this.textBox7.TabIndex = 15;
+            this.txtBxEndOnWeekdays.Location = new System.Drawing.Point(6, 101);
+            this.txtBxEndOnWeekdays.Name = "txtBxEndOnWeekdays";
+            this.txtBxEndOnWeekdays.Size = new System.Drawing.Size(220, 20);
+            this.txtBxEndOnWeekdays.TabIndex = 15;
             // 
             // label8
             // 
@@ -251,12 +251,12 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Окончание работы в будни:";
             // 
-            // textBox8
+            // txtBxStartOnWeekend
             // 
-            this.textBox8.Location = new System.Drawing.Point(6, 153);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(220, 20);
-            this.textBox8.TabIndex = 17;
+            this.txtBxStartOnWeekend.Location = new System.Drawing.Point(6, 153);
+            this.txtBxStartOnWeekend.Name = "txtBxStartOnWeekend";
+            this.txtBxStartOnWeekend.Size = new System.Drawing.Size(220, 20);
+            this.txtBxStartOnWeekend.TabIndex = 17;
             // 
             // label9
             // 
@@ -267,12 +267,12 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Начало работы в выходные:";
             // 
-            // textBox9
+            // txtBxEndOnWeekend
             // 
-            this.textBox9.Location = new System.Drawing.Point(6, 215);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(220, 20);
-            this.textBox9.TabIndex = 19;
+            this.txtBxEndOnWeekend.Location = new System.Drawing.Point(6, 215);
+            this.txtBxEndOnWeekend.Name = "txtBxEndOnWeekend";
+            this.txtBxEndOnWeekend.Size = new System.Drawing.Size(220, 20);
+            this.txtBxEndOnWeekend.TabIndex = 19;
             // 
             // label10
             // 
@@ -283,12 +283,12 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Окончание работы в выходные:";
             // 
-            // textBox10
+            // txtBxStatusName
             // 
-            this.textBox10.Location = new System.Drawing.Point(9, 52);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(220, 20);
-            this.textBox10.TabIndex = 21;
+            this.txtBxStatusName.Location = new System.Drawing.Point(9, 52);
+            this.txtBxStatusName.Name = "txtBxStatusName";
+            this.txtBxStatusName.Size = new System.Drawing.Size(220, 20);
+            this.txtBxStatusName.TabIndex = 21;
             // 
             // label11
             // 
@@ -299,100 +299,100 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Наименование:";
             // 
-            // comboBox1
+            // cmbBxSchedulePhramacy
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 214);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 21);
-            this.comboBox1.TabIndex = 22;
+            this.cmbBxSchedulePhramacy.FormattingEnabled = true;
+            this.cmbBxSchedulePhramacy.Location = new System.Drawing.Point(10, 214);
+            this.cmbBxSchedulePhramacy.Name = "cmbBxSchedulePhramacy";
+            this.cmbBxSchedulePhramacy.Size = new System.Drawing.Size(220, 21);
+            this.cmbBxSchedulePhramacy.TabIndex = 22;
             // 
-            // button1
+            // btnAddPharmacy
             // 
-            this.button1.Location = new System.Drawing.Point(137, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddPharmacy.Location = new System.Drawing.Point(137, 265);
+            this.btnAddPharmacy.Name = "btnAddPharmacy";
+            this.btnAddPharmacy.Size = new System.Drawing.Size(75, 23);
+            this.btnAddPharmacy.TabIndex = 26;
+            this.btnAddPharmacy.Text = "Добавить";
+            this.btnAddPharmacy.UseVisualStyleBackColor = true;
+            this.btnAddPharmacy.Click += new System.EventHandler(this.btnAddPharmacy_Click);
             // 
-            // button2
+            // btnClearPharmacy
             // 
-            this.button2.Location = new System.Drawing.Point(218, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Отчистить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnClearPharmacy.Location = new System.Drawing.Point(218, 265);
+            this.btnClearPharmacy.Name = "btnClearPharmacy";
+            this.btnClearPharmacy.Size = new System.Drawing.Size(75, 23);
+            this.btnClearPharmacy.TabIndex = 27;
+            this.btnClearPharmacy.Text = "Отчистить";
+            this.btnClearPharmacy.UseVisualStyleBackColor = true;
+            this.btnClearPharmacy.Click += new System.EventHandler(this.btnClearPharmacy_Click);
             // 
-            // button3
+            // btnClearCategory
             // 
-            this.button3.Location = new System.Drawing.Point(218, 109);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Отчистить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnClearCategory.Location = new System.Drawing.Point(218, 109);
+            this.btnClearCategory.Name = "btnClearCategory";
+            this.btnClearCategory.Size = new System.Drawing.Size(75, 23);
+            this.btnClearCategory.TabIndex = 29;
+            this.btnClearCategory.Text = "Отчистить";
+            this.btnClearCategory.UseVisualStyleBackColor = true;
+            this.btnClearCategory.Click += new System.EventHandler(this.btnClearCategory_Click);
             // 
-            // button4
+            // btnAddCategory
             // 
-            this.button4.Location = new System.Drawing.Point(137, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Добавить";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnAddCategory.Location = new System.Drawing.Point(137, 109);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(75, 23);
+            this.btnAddCategory.TabIndex = 28;
+            this.btnAddCategory.Text = "Добавить";
+            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
-            // button5
+            // btnClearSchedule
             // 
-            this.button5.Location = new System.Drawing.Point(212, 265);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 31;
-            this.button5.Text = "Отчистить";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnClearSchedule.Location = new System.Drawing.Point(212, 265);
+            this.btnClearSchedule.Name = "btnClearSchedule";
+            this.btnClearSchedule.Size = new System.Drawing.Size(75, 23);
+            this.btnClearSchedule.TabIndex = 31;
+            this.btnClearSchedule.Text = "Отчистить";
+            this.btnClearSchedule.UseVisualStyleBackColor = true;
+            this.btnClearSchedule.Click += new System.EventHandler(this.btnClearSchedule_Click);
             // 
-            // button6
+            // btnAddSchedule
             // 
-            this.button6.Location = new System.Drawing.Point(131, 265);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Добавить";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnAddSchedule.Location = new System.Drawing.Point(131, 265);
+            this.btnAddSchedule.Name = "btnAddSchedule";
+            this.btnAddSchedule.Size = new System.Drawing.Size(75, 23);
+            this.btnAddSchedule.TabIndex = 30;
+            this.btnAddSchedule.Text = "Добавить";
+            this.btnAddSchedule.UseVisualStyleBackColor = true;
+            this.btnAddSchedule.Click += new System.EventHandler(this.btnAddSchedule_Click);
             // 
-            // button7
+            // btnClearOrderStatus
             // 
-            this.button7.Location = new System.Drawing.Point(212, 109);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Отчистить";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnClearOrderStatus.Location = new System.Drawing.Point(212, 109);
+            this.btnClearOrderStatus.Name = "btnClearOrderStatus";
+            this.btnClearOrderStatus.Size = new System.Drawing.Size(75, 23);
+            this.btnClearOrderStatus.TabIndex = 33;
+            this.btnClearOrderStatus.Text = "Отчистить";
+            this.btnClearOrderStatus.UseVisualStyleBackColor = true;
+            this.btnClearOrderStatus.Click += new System.EventHandler(this.btnClearOrderStatus_Click);
             // 
-            // button8
+            // btnAddOrderStatus
             // 
-            this.button8.Location = new System.Drawing.Point(131, 108);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Добавить";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnAddOrderStatus.Location = new System.Drawing.Point(131, 108);
+            this.btnAddOrderStatus.Name = "btnAddOrderStatus";
+            this.btnAddOrderStatus.Size = new System.Drawing.Size(75, 23);
+            this.btnAddOrderStatus.TabIndex = 32;
+            this.btnAddOrderStatus.Text = "Добавить";
+            this.btnAddOrderStatus.UseVisualStyleBackColor = true;
+            this.btnAddOrderStatus.Click += new System.EventHandler(this.btnAddOrderStatus_Click);
             // 
-            // textBox15
+            // txtBxRetypePassword
             // 
-            this.textBox15.Location = new System.Drawing.Point(9, 286);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(337, 20);
-            this.textBox15.TabIndex = 52;
+            this.txtBxRetypePassword.Location = new System.Drawing.Point(9, 286);
+            this.txtBxRetypePassword.Name = "txtBxRetypePassword";
+            this.txtBxRetypePassword.Size = new System.Drawing.Size(337, 20);
+            this.txtBxRetypePassword.TabIndex = 52;
             // 
             // label18
             // 
@@ -403,56 +403,56 @@
             this.label18.TabIndex = 51;
             this.label18.Text = "Повторите пароль:";
             // 
-            // comboBox3
+            // cmbBxLinkedPharmacy
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(9, 381);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(337, 21);
-            this.comboBox3.TabIndex = 50;
+            this.cmbBxLinkedPharmacy.FormattingEnabled = true;
+            this.cmbBxLinkedPharmacy.Location = new System.Drawing.Point(9, 381);
+            this.cmbBxLinkedPharmacy.Name = "cmbBxLinkedPharmacy";
+            this.cmbBxLinkedPharmacy.Size = new System.Drawing.Size(337, 21);
+            this.cmbBxLinkedPharmacy.TabIndex = 50;
             // 
-            // comboBox2
+            // cmbBxSystemRole
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(12, 332);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(331, 21);
-            this.comboBox2.TabIndex = 49;
+            this.cmbBxSystemRole.FormattingEnabled = true;
+            this.cmbBxSystemRole.Location = new System.Drawing.Point(12, 332);
+            this.cmbBxSystemRole.Name = "cmbBxSystemRole";
+            this.cmbBxSystemRole.Size = new System.Drawing.Size(331, 21);
+            this.cmbBxSystemRole.TabIndex = 49;
             // 
-            // textBox14
+            // txtBxPassword
             // 
-            this.textBox14.Location = new System.Drawing.Point(6, 243);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(337, 20);
-            this.textBox14.TabIndex = 48;
+            this.txtBxPassword.Location = new System.Drawing.Point(6, 243);
+            this.txtBxPassword.Name = "txtBxPassword";
+            this.txtBxPassword.Size = new System.Drawing.Size(337, 20);
+            this.txtBxPassword.TabIndex = 48;
             // 
-            // textBox13
+            // txtBxLogin
             // 
-            this.textBox13.Location = new System.Drawing.Point(6, 195);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(337, 20);
-            this.textBox13.TabIndex = 47;
+            this.txtBxLogin.Location = new System.Drawing.Point(6, 195);
+            this.txtBxLogin.Name = "txtBxLogin";
+            this.txtBxLogin.Size = new System.Drawing.Size(337, 20);
+            this.txtBxLogin.TabIndex = 47;
             // 
-            // textBox12
+            // txtBxPhoneNumber
             // 
-            this.textBox12.Location = new System.Drawing.Point(6, 145);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(337, 20);
-            this.textBox12.TabIndex = 46;
+            this.txtBxPhoneNumber.Location = new System.Drawing.Point(6, 145);
+            this.txtBxPhoneNumber.Name = "txtBxPhoneNumber";
+            this.txtBxPhoneNumber.Size = new System.Drawing.Size(337, 20);
+            this.txtBxPhoneNumber.TabIndex = 46;
             // 
-            // textBox11
+            // txtBxBirthDate
             // 
-            this.textBox11.Location = new System.Drawing.Point(9, 98);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(337, 20);
-            this.textBox11.TabIndex = 45;
+            this.txtBxBirthDate.Location = new System.Drawing.Point(9, 98);
+            this.txtBxBirthDate.Name = "txtBxBirthDate";
+            this.txtBxBirthDate.Size = new System.Drawing.Size(337, 20);
+            this.txtBxBirthDate.TabIndex = 45;
             // 
-            // textBox4
+            // txtBxFullName
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 51);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(337, 20);
-            this.textBox4.TabIndex = 44;
+            this.txtBxFullName.Location = new System.Drawing.Point(6, 51);
+            this.txtBxFullName.Name = "txtBxFullName";
+            this.txtBxFullName.Size = new System.Drawing.Size(337, 20);
+            this.txtBxFullName.TabIndex = 44;
             // 
             // label17
             // 
@@ -517,33 +517,33 @@
             this.label23.TabIndex = 37;
             this.label23.Text = "ФИО:";
             // 
-            // button9
+            // btnClearUser
             // 
-            this.button9.Location = new System.Drawing.Point(271, 421);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 36;
-            this.button9.Text = "Отчистить";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnClearUser.Location = new System.Drawing.Point(271, 421);
+            this.btnClearUser.Name = "btnClearUser";
+            this.btnClearUser.Size = new System.Drawing.Size(75, 23);
+            this.btnClearUser.TabIndex = 36;
+            this.btnClearUser.Text = "Отчистить";
+            this.btnClearUser.UseVisualStyleBackColor = true;
+            this.btnClearUser.Click += new System.EventHandler(this.btnClearUser_Click);
             // 
-            // button10
+            // btnAddUser
             // 
-            this.button10.Location = new System.Drawing.Point(190, 421);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 35;
-            this.button10.Text = "Добавить";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnAddUser.Location = new System.Drawing.Point(190, 421);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(75, 23);
+            this.btnAddUser.TabIndex = 35;
+            this.btnAddUser.Text = "Добавить";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
-            // comboBox4
+            // cmbBxDeletePharmacyName
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(6, 48);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(488, 21);
-            this.comboBox4.TabIndex = 59;
+            this.cmbBxDeletePharmacyName.FormattingEnabled = true;
+            this.cmbBxDeletePharmacyName.Location = new System.Drawing.Point(6, 48);
+            this.cmbBxDeletePharmacyName.Name = "cmbBxDeletePharmacyName";
+            this.cmbBxDeletePharmacyName.Size = new System.Drawing.Size(488, 21);
+            this.cmbBxDeletePharmacyName.TabIndex = 59;
             // 
             // label29
             // 
@@ -554,13 +554,13 @@
             this.label29.TabIndex = 58;
             this.label29.Text = "Наименование:";
             // 
-            // comboBox5
+            // cmbBxDeleteWorkScheduleName
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 48);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(488, 21);
-            this.comboBox5.TabIndex = 61;
+            this.cmbBxDeleteWorkScheduleName.FormattingEnabled = true;
+            this.cmbBxDeleteWorkScheduleName.Location = new System.Drawing.Point(6, 48);
+            this.cmbBxDeleteWorkScheduleName.Name = "cmbBxDeleteWorkScheduleName";
+            this.cmbBxDeleteWorkScheduleName.Size = new System.Drawing.Size(488, 21);
+            this.cmbBxDeleteWorkScheduleName.TabIndex = 61;
             // 
             // label30
             // 
@@ -571,13 +571,13 @@
             this.label30.TabIndex = 60;
             this.label30.Text = "Наименование:";
             // 
-            // comboBox6
+            // cmbBxDeleteUserFullName
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(9, 56);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(485, 21);
-            this.comboBox6.TabIndex = 63;
+            this.cmbBxDeleteUserFullName.FormattingEnabled = true;
+            this.cmbBxDeleteUserFullName.Location = new System.Drawing.Point(9, 56);
+            this.cmbBxDeleteUserFullName.Name = "cmbBxDeleteUserFullName";
+            this.cmbBxDeleteUserFullName.Size = new System.Drawing.Size(485, 21);
+            this.cmbBxDeleteUserFullName.TabIndex = 63;
             // 
             // label31
             // 
@@ -588,13 +588,13 @@
             this.label31.TabIndex = 62;
             this.label31.Text = "Наименование:";
             // 
-            // comboBox7
+            // cmbBxDeleteOrderStatusName
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(6, 40);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(482, 21);
-            this.comboBox7.TabIndex = 65;
+            this.cmbBxDeleteOrderStatusName.FormattingEnabled = true;
+            this.cmbBxDeleteOrderStatusName.Location = new System.Drawing.Point(6, 40);
+            this.cmbBxDeleteOrderStatusName.Name = "cmbBxDeleteOrderStatusName";
+            this.cmbBxDeleteOrderStatusName.Size = new System.Drawing.Size(482, 21);
+            this.cmbBxDeleteOrderStatusName.TabIndex = 65;
             // 
             // label32
             // 
@@ -605,13 +605,13 @@
             this.label32.TabIndex = 64;
             this.label32.Text = "Наименование:";
             // 
-            // comboBox8
+            // cmbBxDeleteCategoryName
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(6, 47);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(482, 21);
-            this.comboBox8.TabIndex = 67;
+            this.cmbBxDeleteCategoryName.FormattingEnabled = true;
+            this.cmbBxDeleteCategoryName.Location = new System.Drawing.Point(6, 47);
+            this.cmbBxDeleteCategoryName.Name = "cmbBxDeleteCategoryName";
+            this.cmbBxDeleteCategoryName.Size = new System.Drawing.Size(482, 21);
+            this.cmbBxDeleteCategoryName.TabIndex = 67;
             // 
             // label33
             // 
@@ -622,204 +622,230 @@
             this.label33.TabIndex = 66;
             this.label33.Text = "Наименование:";
             // 
-            // button11
+            // btnDeletePharmacyClear
             // 
-            this.button11.Location = new System.Drawing.Point(419, 134);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 69;
-            this.button11.Text = "Отчистить";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnDeletePharmacyClear.Location = new System.Drawing.Point(419, 134);
+            this.btnDeletePharmacyClear.Name = "btnDeletePharmacyClear";
+            this.btnDeletePharmacyClear.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePharmacyClear.TabIndex = 69;
+            this.btnDeletePharmacyClear.Text = "Отчистить";
+            this.btnDeletePharmacyClear.UseVisualStyleBackColor = true;
+            this.btnDeletePharmacyClear.Click += new System.EventHandler(this.btnDeletePharmacyClear_Click);
             // 
-            // button12
+            // btnDeletePharmacy
             // 
-            this.button12.Location = new System.Drawing.Point(338, 134);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 68;
-            this.button12.Text = "Удалить";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.btnDeletePharmacy.Location = new System.Drawing.Point(338, 134);
+            this.btnDeletePharmacy.Name = "btnDeletePharmacy";
+            this.btnDeletePharmacy.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePharmacy.TabIndex = 68;
+            this.btnDeletePharmacy.Text = "Удалить";
+            this.btnDeletePharmacy.UseVisualStyleBackColor = true;
+            this.btnDeletePharmacy.Click += new System.EventHandler(this.btnDeletePharmacy_Click);
             // 
-            // button13
+            // btnDeleteWorkScheduleClear
             // 
-            this.button13.Location = new System.Drawing.Point(419, 134);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 71;
-            this.button13.Text = "Отчистить";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.btnDeleteWorkScheduleClear.Location = new System.Drawing.Point(419, 134);
+            this.btnDeleteWorkScheduleClear.Name = "btnDeleteWorkScheduleClear";
+            this.btnDeleteWorkScheduleClear.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteWorkScheduleClear.TabIndex = 71;
+            this.btnDeleteWorkScheduleClear.Text = "Отчистить";
+            this.btnDeleteWorkScheduleClear.UseVisualStyleBackColor = true;
+            this.btnDeleteWorkScheduleClear.Click += new System.EventHandler(this.btnDeleteWorkScheduleClear_Click);
             // 
-            // button14
+            // btnDeleteWorkSchedule
             // 
-            this.button14.Location = new System.Drawing.Point(338, 134);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 70;
-            this.button14.Text = "Удалить";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.btnDeleteWorkSchedule.Location = new System.Drawing.Point(338, 134);
+            this.btnDeleteWorkSchedule.Name = "btnDeleteWorkSchedule";
+            this.btnDeleteWorkSchedule.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteWorkSchedule.TabIndex = 70;
+            this.btnDeleteWorkSchedule.Text = "Удалить";
+            this.btnDeleteWorkSchedule.UseVisualStyleBackColor = true;
+            this.btnDeleteWorkSchedule.Click += new System.EventHandler(this.btnDeleteWorkSchedule_Click);
             // 
-            // button15
+            // btnDeleteUserClear
             // 
-            this.button15.Location = new System.Drawing.Point(419, 134);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 73;
-            this.button15.Text = "Отчистить";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.btnDeleteUserClear.Location = new System.Drawing.Point(419, 134);
+            this.btnDeleteUserClear.Name = "btnDeleteUserClear";
+            this.btnDeleteUserClear.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteUserClear.TabIndex = 73;
+            this.btnDeleteUserClear.Text = "Отчистить";
+            this.btnDeleteUserClear.UseVisualStyleBackColor = true;
+            this.btnDeleteUserClear.Click += new System.EventHandler(this.btnDeleteUserClear_Click);
             // 
-            // button16
+            // btnDeleteUser
             // 
-            this.button16.Location = new System.Drawing.Point(338, 134);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 72;
-            this.button16.Text = "Удалить";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.btnDeleteUser.Location = new System.Drawing.Point(338, 134);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteUser.TabIndex = 72;
+            this.btnDeleteUser.Text = "Удалить";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
-            // button17
+            // btnDeleteOrderStatusClear
             // 
-            this.button17.Location = new System.Drawing.Point(413, 87);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 75;
-            this.button17.Text = "Отчистить";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.btnDeleteOrderStatusClear.Location = new System.Drawing.Point(413, 87);
+            this.btnDeleteOrderStatusClear.Name = "btnDeleteOrderStatusClear";
+            this.btnDeleteOrderStatusClear.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteOrderStatusClear.TabIndex = 75;
+            this.btnDeleteOrderStatusClear.Text = "Отчистить";
+            this.btnDeleteOrderStatusClear.UseVisualStyleBackColor = true;
+            this.btnDeleteOrderStatusClear.Click += new System.EventHandler(this.btnDeleteOrderStatusClear_Click);
             // 
-            // button18
+            // btnDeleteOrderStatus
             // 
-            this.button18.Location = new System.Drawing.Point(332, 87);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 74;
-            this.button18.Text = "Удалить";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.btnDeleteOrderStatus.Location = new System.Drawing.Point(332, 87);
+            this.btnDeleteOrderStatus.Name = "btnDeleteOrderStatus";
+            this.btnDeleteOrderStatus.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteOrderStatus.TabIndex = 74;
+            this.btnDeleteOrderStatus.Text = "Удалить";
+            this.btnDeleteOrderStatus.UseVisualStyleBackColor = true;
+            this.btnDeleteOrderStatus.Click += new System.EventHandler(this.btnDeleteOrderStatus_Click);
             // 
-            // button19
+            // btnDeleteCategoryClear
             // 
-            this.button19.Location = new System.Drawing.Point(413, 87);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 77;
-            this.button19.Text = "Отчистить";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.btnDeleteCategoryClear.Location = new System.Drawing.Point(413, 87);
+            this.btnDeleteCategoryClear.Name = "btnDeleteCategoryClear";
+            this.btnDeleteCategoryClear.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteCategoryClear.TabIndex = 77;
+            this.btnDeleteCategoryClear.Text = "Отчистить";
+            this.btnDeleteCategoryClear.UseVisualStyleBackColor = true;
+            this.btnDeleteCategoryClear.Click += new System.EventHandler(this.btnDeleteCategoryClear_Click);
             // 
-            // button20
+            // btnDeleteCategory
             // 
-            this.button20.Location = new System.Drawing.Point(332, 87);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 76;
-            this.button20.Text = "Удалить";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(332, 87);
+            this.btnDeleteCategory.Name = "btnDeleteCategory";
+            this.btnDeleteCategory.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteCategory.TabIndex = 76;
+            this.btnDeleteCategory.Text = "Удалить";
+            this.btnDeleteCategory.UseVisualStyleBackColor = true;
+            this.btnDeleteCategory.Click += new System.EventHandler(this.btnDeleteCategory_Click);
             // 
-            // button21
+            // btnRevenue
             // 
-            this.button21.Location = new System.Drawing.Point(9, 214);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(247, 36);
-            this.button21.TabIndex = 82;
-            this.button21.Text = "Доходы";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
+            this.btnRevenue.Location = new System.Drawing.Point(9, 214);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Size = new System.Drawing.Size(247, 36);
+            this.btnRevenue.TabIndex = 82;
+            this.btnRevenue.Text = "Доходы";
+            this.btnRevenue.UseVisualStyleBackColor = true;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
-            // button22
+            // btnNumberOrders
             // 
-            this.button22.Location = new System.Drawing.Point(9, 88);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(247, 36);
-            this.button22.TabIndex = 81;
-            this.button22.Text = "Количество заказов";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.btnNumberOrders.Location = new System.Drawing.Point(9, 88);
+            this.btnNumberOrders.Name = "btnNumberOrders";
+            this.btnNumberOrders.Size = new System.Drawing.Size(247, 36);
+            this.btnNumberOrders.TabIndex = 81;
+            this.btnNumberOrders.Text = "Количество заказов";
+            this.btnNumberOrders.UseVisualStyleBackColor = true;
+            this.btnNumberOrders.Click += new System.EventHandler(this.btnNumberOrders_Click);
             // 
-            // button23
+            // btnTopPharmacies
             // 
-            this.button23.Location = new System.Drawing.Point(9, 130);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(247, 36);
-            this.button23.TabIndex = 80;
-            this.button23.Text = "Рейтинг аптек";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.btnTopPharmacies.Location = new System.Drawing.Point(9, 130);
+            this.btnTopPharmacies.Name = "btnTopPharmacies";
+            this.btnTopPharmacies.Size = new System.Drawing.Size(247, 36);
+            this.btnTopPharmacies.TabIndex = 80;
+            this.btnTopPharmacies.Text = "Рейтинг аптек";
+            this.btnTopPharmacies.UseVisualStyleBackColor = true;
+            this.btnTopPharmacies.Click += new System.EventHandler(this.btnTopPharmacies_Click);
             // 
-            // button24
+            // btnNumberProductSold
             // 
-            this.button24.Location = new System.Drawing.Point(9, 46);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(247, 36);
-            this.button24.TabIndex = 79;
-            this.button24.Text = "Количество проданной продукции";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.btnNumberProductSold.Location = new System.Drawing.Point(9, 46);
+            this.btnNumberProductSold.Name = "btnNumberProductSold";
+            this.btnNumberProductSold.Size = new System.Drawing.Size(247, 36);
+            this.btnNumberProductSold.TabIndex = 79;
+            this.btnNumberProductSold.Text = "Количество проданной продукции";
+            this.btnNumberProductSold.UseVisualStyleBackColor = true;
+            this.btnNumberProductSold.Click += new System.EventHandler(this.btnNumberProductSold_Click);
             // 
-            // chart1
+            // rootRevenueChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(281, 23);
-            this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(755, 401);
-            this.chart1.TabIndex = 84;
-            this.chart1.Text = "chart1";
+            chartArea1.Name = "ChartArea1";
+            this.rootRevenueChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.rootRevenueChart.Legends.Add(legend1);
+            this.rootRevenueChart.Location = new System.Drawing.Point(281, 23);
+            this.rootRevenueChart.Name = "rootRevenueChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.rootRevenueChart.Series.Add(series1);
+            this.rootRevenueChart.Size = new System.Drawing.Size(755, 401);
+            this.rootRevenueChart.TabIndex = 84;
+            this.rootRevenueChart.Text = "chart1";
             // 
-            // button25
+            // btnTopMedicines
             // 
-            this.button25.Location = new System.Drawing.Point(6, 172);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(247, 36);
-            this.button25.TabIndex = 85;
-            this.button25.Text = "Рейтинг лекарств";
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
+            this.btnTopMedicines.Location = new System.Drawing.Point(6, 172);
+            this.btnTopMedicines.Name = "btnTopMedicines";
+            this.btnTopMedicines.Size = new System.Drawing.Size(247, 36);
+            this.btnTopMedicines.TabIndex = 85;
+            this.btnTopMedicines.Text = "Рейтинг лекарств";
+            this.btnTopMedicines.UseVisualStyleBackColor = true;
+            this.btnTopMedicines.Click += new System.EventHandler(this.btnTopMedicines_Click);
             // 
-            // dataGridView1
+            // rootPharmaciesStatisticsTable
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rootPharmaciesStatisticsTable.AllowUserToAddRows = false;
+            this.rootPharmaciesStatisticsTable.AllowUserToDeleteRows = false;
+            this.rootPharmaciesStatisticsTable.AllowUserToResizeColumns = false;
+            this.rootPharmaciesStatisticsTable.AllowUserToResizeRows = false;
+            this.rootPharmaciesStatisticsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.rootPharmaciesStatisticsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rootPharmaciesStatisticsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(281, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 401);
-            this.dataGridView1.TabIndex = 86;
+            this.rootPharmaciesStatisticsTable.Location = new System.Drawing.Point(281, 23);
+            this.rootPharmaciesStatisticsTable.Name = "rootPharmaciesStatisticsTable";
+            this.rootPharmaciesStatisticsTable.Size = new System.Drawing.Size(755, 401);
+            this.rootPharmaciesStatisticsTable.TabIndex = 86;
             // 
-            // dataGridView2
+            // Column3
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeColumns = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3.DataPropertyName = "Наименование:";
+            this.Column3.HeaderText = "Наименование:";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Количество:";
+            this.Column4.HeaderText = "Количество:";
+            this.Column4.Name = "Column4";
+            // 
+            // rootMedicinesStatisticsTable
+            // 
+            this.rootMedicinesStatisticsTable.AllowUserToAddRows = false;
+            this.rootMedicinesStatisticsTable.AllowUserToDeleteRows = false;
+            this.rootMedicinesStatisticsTable.AllowUserToResizeColumns = false;
+            this.rootMedicinesStatisticsTable.AllowUserToResizeRows = false;
+            this.rootMedicinesStatisticsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.rootMedicinesStatisticsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rootMedicinesStatisticsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView2.Location = new System.Drawing.Point(281, 23);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(755, 401);
-            this.dataGridView2.TabIndex = 87;
+            this.rootMedicinesStatisticsTable.Location = new System.Drawing.Point(281, 23);
+            this.rootMedicinesStatisticsTable.Name = "rootMedicinesStatisticsTable";
+            this.rootMedicinesStatisticsTable.ReadOnly = true;
+            this.rootMedicinesStatisticsTable.Size = new System.Drawing.Size(755, 401);
+            this.rootMedicinesStatisticsTable.TabIndex = 87;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Наименование:";
+            this.Column1.HeaderText = "Наименование:";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Количество:";
+            this.Column2.HeaderText = "Количество:";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // tabControl1
             // 
@@ -849,9 +875,9 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox4);
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Controls.Add(this.button9);
+            this.groupBox5.Controls.Add(this.txtBxFullName);
+            this.groupBox5.Controls.Add(this.btnAddUser);
+            this.groupBox5.Controls.Add(this.btnClearUser);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.label21);
@@ -859,14 +885,14 @@
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label16);
             this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Controls.Add(this.textBox11);
-            this.groupBox5.Controls.Add(this.textBox12);
-            this.groupBox5.Controls.Add(this.textBox13);
-            this.groupBox5.Controls.Add(this.textBox14);
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.comboBox3);
+            this.groupBox5.Controls.Add(this.txtBxBirthDate);
+            this.groupBox5.Controls.Add(this.txtBxPhoneNumber);
+            this.groupBox5.Controls.Add(this.txtBxLogin);
+            this.groupBox5.Controls.Add(this.txtBxPassword);
+            this.groupBox5.Controls.Add(this.cmbBxSystemRole);
+            this.groupBox5.Controls.Add(this.cmbBxLinkedPharmacy);
             this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.textBox15);
+            this.groupBox5.Controls.Add(this.txtBxRetypePassword);
             this.groupBox5.Location = new System.Drawing.Point(656, 7);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(358, 451);
@@ -876,10 +902,10 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox10);
+            this.groupBox4.Controls.Add(this.txtBxStatusName);
             this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Controls.Add(this.button8);
-            this.groupBox4.Controls.Add(this.button7);
+            this.groupBox4.Controls.Add(this.btnAddOrderStatus);
+            this.groupBox4.Controls.Add(this.btnClearOrderStatus);
             this.groupBox4.Location = new System.Drawing.Point(333, 320);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(302, 138);
@@ -889,9 +915,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.btnClearCategory);
+            this.groupBox3.Controls.Add(this.btnAddCategory);
+            this.groupBox3.Controls.Add(this.txtBxCategoryName);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Location = new System.Drawing.Point(6, 320);
             this.groupBox3.Name = "groupBox3";
@@ -902,16 +928,16 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.txtBxStartOnWeekdays);
+            this.groupBox2.Controls.Add(this.txtBxEndOnWeekdays);
+            this.groupBox2.Controls.Add(this.txtBxStartOnWeekend);
+            this.groupBox2.Controls.Add(this.txtBxEndOnWeekend);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.btnAddSchedule);
+            this.groupBox2.Controls.Add(this.btnClearSchedule);
             this.groupBox2.Location = new System.Drawing.Point(333, 7);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(302, 301);
@@ -921,16 +947,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtBxPhramacyAddress);
+            this.groupBox1.Controls.Add(this.txtBxPhramacyName);
+            this.groupBox1.Controls.Add(this.txtBxPhramacyPhoneNumber);
+            this.groupBox1.Controls.Add(this.cmbBxSchedulePhramacy);
             this.groupBox1.Controls.Add(this.label29);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnAddPharmacy);
+            this.groupBox1.Controls.Add(this.btnClearPharmacy);
             this.groupBox1.Location = new System.Drawing.Point(6, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(305, 301);
@@ -955,9 +981,9 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.button18);
-            this.groupBox10.Controls.Add(this.button17);
-            this.groupBox10.Controls.Add(this.comboBox7);
+            this.groupBox10.Controls.Add(this.btnDeleteOrderStatus);
+            this.groupBox10.Controls.Add(this.btnDeleteOrderStatusClear);
+            this.groupBox10.Controls.Add(this.cmbBxDeleteOrderStatusName);
             this.groupBox10.Controls.Add(this.label6);
             this.groupBox10.Location = new System.Drawing.Point(12, 185);
             this.groupBox10.Name = "groupBox10";
@@ -968,9 +994,9 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.comboBox6);
-            this.groupBox9.Controls.Add(this.button15);
-            this.groupBox9.Controls.Add(this.button16);
+            this.groupBox9.Controls.Add(this.cmbBxDeleteUserFullName);
+            this.groupBox9.Controls.Add(this.btnDeleteUserClear);
+            this.groupBox9.Controls.Add(this.btnDeleteUser);
             this.groupBox9.Controls.Add(this.label1);
             this.groupBox9.Location = new System.Drawing.Point(546, 185);
             this.groupBox9.Name = "groupBox9";
@@ -981,10 +1007,10 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button14);
-            this.groupBox8.Controls.Add(this.button13);
+            this.groupBox8.Controls.Add(this.btnDeleteWorkSchedule);
+            this.groupBox8.Controls.Add(this.btnDeleteWorkScheduleClear);
             this.groupBox8.Controls.Add(this.label33);
-            this.groupBox8.Controls.Add(this.comboBox5);
+            this.groupBox8.Controls.Add(this.cmbBxDeleteWorkScheduleName);
             this.groupBox8.Location = new System.Drawing.Point(546, 6);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(500, 163);
@@ -994,10 +1020,10 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.comboBox8);
+            this.groupBox7.Controls.Add(this.cmbBxDeleteCategoryName);
             this.groupBox7.Controls.Add(this.label11);
-            this.groupBox7.Controls.Add(this.button20);
-            this.groupBox7.Controls.Add(this.button19);
+            this.groupBox7.Controls.Add(this.btnDeleteCategory);
+            this.groupBox7.Controls.Add(this.btnDeleteCategoryClear);
             this.groupBox7.Location = new System.Drawing.Point(12, 314);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(500, 116);
@@ -1007,9 +1033,9 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button11);
-            this.groupBox6.Controls.Add(this.button12);
-            this.groupBox6.Controls.Add(this.comboBox4);
+            this.groupBox6.Controls.Add(this.btnDeletePharmacyClear);
+            this.groupBox6.Controls.Add(this.btnDeletePharmacy);
+            this.groupBox6.Controls.Add(this.cmbBxDeletePharmacyName);
             this.groupBox6.Controls.Add(this.label31);
             this.groupBox6.Location = new System.Drawing.Point(6, 6);
             this.groupBox6.Name = "groupBox6";
@@ -1020,11 +1046,11 @@
             // 
             // statist
             // 
-            this.statist.Controls.Add(this.button26);
+            this.statist.Controls.Add(this.btnExcelExport);
             this.statist.Controls.Add(this.groupBox11);
-            this.statist.Controls.Add(this.dataGridView2);
-            this.statist.Controls.Add(this.dataGridView1);
-            this.statist.Controls.Add(this.chart1);
+            this.statist.Controls.Add(this.rootMedicinesStatisticsTable);
+            this.statist.Controls.Add(this.rootPharmaciesStatisticsTable);
+            this.statist.Controls.Add(this.rootRevenueChart);
             this.statist.Location = new System.Drawing.Point(4, 22);
             this.statist.Name = "statist";
             this.statist.Size = new System.Drawing.Size(1052, 478);
@@ -1032,23 +1058,23 @@
             this.statist.Text = "Статистика";
             this.statist.UseVisualStyleBackColor = true;
             // 
-            // button26
+            // btnExcelExport
             // 
-            this.button26.Location = new System.Drawing.Point(842, 436);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(194, 23);
-            this.button26.TabIndex = 89;
-            this.button26.Text = "Выгрузить в Excel";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            this.btnExcelExport.Location = new System.Drawing.Point(842, 436);
+            this.btnExcelExport.Name = "btnExcelExport";
+            this.btnExcelExport.Size = new System.Drawing.Size(194, 23);
+            this.btnExcelExport.TabIndex = 89;
+            this.btnExcelExport.Text = "Выгрузить в Excel";
+            this.btnExcelExport.UseVisualStyleBackColor = true;
+            this.btnExcelExport.Click += new System.EventHandler(this.btnExcelExport_Click);
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.button24);
-            this.groupBox11.Controls.Add(this.button22);
-            this.groupBox11.Controls.Add(this.button21);
-            this.groupBox11.Controls.Add(this.button23);
-            this.groupBox11.Controls.Add(this.button25);
+            this.groupBox11.Controls.Add(this.btnNumberProductSold);
+            this.groupBox11.Controls.Add(this.btnNumberOrders);
+            this.groupBox11.Controls.Add(this.btnRevenue);
+            this.groupBox11.Controls.Add(this.btnTopPharmacies);
+            this.groupBox11.Controls.Add(this.btnTopMedicines);
             this.groupBox11.Location = new System.Drawing.Point(13, 14);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(262, 445);
@@ -1056,56 +1082,30 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Выберите статистику";
             // 
-            // button27
+            // btnExit
             // 
-            this.button27.Location = new System.Drawing.Point(963, 5);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(105, 23);
-            this.button27.TabIndex = 89;
-            this.button27.Text = "Выход";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Наименование:";
-            this.Column1.HeaderText = "Наименование:";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Количество:";
-            this.Column2.HeaderText = "Количество:";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Наименование:";
-            this.Column3.HeaderText = "Наименование:";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Количество:";
-            this.Column4.HeaderText = "Количество:";
-            this.Column4.Name = "Column4";
+            this.btnExit.Location = new System.Drawing.Point(963, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(105, 23);
+            this.btnExit.TabIndex = 89;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // RootController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 529);
-            this.Controls.Add(this.button27);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.tabControl1);
             this.Name = "RootController";
             this.Text = "Модуль корпоративной информационной системы сети аптек";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RootController_FormClosing);
             this.Load += new System.EventHandler(this.RootForm1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootRevenueChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootPharmaciesStatisticsTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rootMedicinesStatisticsTable)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.add.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -1137,42 +1137,42 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBxPhramacyName;
+        private System.Windows.Forms.TextBox txtBxPhramacyAddress;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBxPhramacyPhoneNumber;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBxCategoryName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtBxStartOnWeekdays;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBxEndOnWeekdays;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtBxStartOnWeekend;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtBxEndOnWeekend;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBxStatusName;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.ComboBox cmbBxSchedulePhramacy;
+        private System.Windows.Forms.Button btnAddPharmacy;
+        private System.Windows.Forms.Button btnClearPharmacy;
+        private System.Windows.Forms.Button btnClearCategory;
+        private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.Button btnClearSchedule;
+        private System.Windows.Forms.Button btnAddSchedule;
+        private System.Windows.Forms.Button btnClearOrderStatus;
+        private System.Windows.Forms.Button btnAddOrderStatus;
+        private System.Windows.Forms.TextBox txtBxRetypePassword;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cmbBxLinkedPharmacy;
+        private System.Windows.Forms.ComboBox cmbBxSystemRole;
+        private System.Windows.Forms.TextBox txtBxPassword;
+        private System.Windows.Forms.TextBox txtBxLogin;
+        private System.Windows.Forms.TextBox txtBxPhoneNumber;
+        private System.Windows.Forms.TextBox txtBxBirthDate;
+        private System.Windows.Forms.TextBox txtBxFullName;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
@@ -1180,36 +1180,36 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button btnClearUser;
+        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.ComboBox cmbBxDeletePharmacyName;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbBxDeleteWorkScheduleName;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cmbBxDeleteUserFullName;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cmbBxDeleteOrderStatusName;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cmbBxDeleteCategoryName;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btnDeletePharmacyClear;
+        private System.Windows.Forms.Button btnDeletePharmacy;
+        private System.Windows.Forms.Button btnDeleteWorkScheduleClear;
+        private System.Windows.Forms.Button btnDeleteWorkSchedule;
+        private System.Windows.Forms.Button btnDeleteUserClear;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btnDeleteOrderStatusClear;
+        private System.Windows.Forms.Button btnDeleteOrderStatus;
+        private System.Windows.Forms.Button btnDeleteCategoryClear;
+        private System.Windows.Forms.Button btnDeleteCategory;
+        private System.Windows.Forms.Button btnRevenue;
+        private System.Windows.Forms.Button btnNumberOrders;
+        private System.Windows.Forms.Button btnTopPharmacies;
+        private System.Windows.Forms.Button btnNumberProductSold;
+        private System.Windows.Forms.DataVisualization.Charting.Chart rootRevenueChart;
+        private System.Windows.Forms.Button btnTopMedicines;
+        private System.Windows.Forms.DataGridView rootPharmaciesStatisticsTable;
+        private System.Windows.Forms.DataGridView rootMedicinesStatisticsTable;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage add;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1225,8 +1225,8 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button btnExcelExport;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
