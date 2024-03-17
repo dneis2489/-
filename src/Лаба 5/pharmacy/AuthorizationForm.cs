@@ -26,8 +26,8 @@ namespace pharmacy
 
         private void authorizeBtn_Click(object sender, EventArgs e) //Кнопка авторизоваться
         {
-            string login = textBox1.Text;
-            string password = textBox2.Text;
+            string login = txtBxLogin.Text;
+            string password = txtBxPassword.Text;
             if (login != null && password != null)
             {
                 authorizedUser = AuthorizationService.AuthorizationUser(login, password);
@@ -68,14 +68,14 @@ namespace pharmacy
 
         private void showHideBtn_Click(object sender, EventArgs e)
         {
-            if (textBox2.UseSystemPasswordChar == false)
+            if (txtBxPassword.UseSystemPasswordChar == false)
             {
-                textBox2.UseSystemPasswordChar = true;
+                txtBxPassword.UseSystemPasswordChar = true;
                 showHideBtn.Image = Properties.Resources.close_eye;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = false;
+                txtBxPassword.UseSystemPasswordChar = false;
                 showHideBtn.Image = Properties.Resources.open_eye;
             }
 

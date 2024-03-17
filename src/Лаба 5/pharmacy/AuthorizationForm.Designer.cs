@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBxLogin = new System.Windows.Forms.TextBox();
+            this.txtBxPassword = new System.Windows.Forms.TextBox();
             this.authorizeBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.showHideBtn = new System.Windows.Forms.Button();
@@ -55,22 +55,22 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Пароль:";
             // 
-            // textBox1
+            // txtBxLogin
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(116, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtBxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtBxLogin.Location = new System.Drawing.Point(116, 81);
+            this.txtBxLogin.Name = "txtBxLogin";
+            this.txtBxLogin.Size = new System.Drawing.Size(255, 22);
+            this.txtBxLogin.TabIndex = 2;
             // 
-            // textBox2
+            // txtBxPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(116, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtBxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtBxPassword.Location = new System.Drawing.Point(116, 132);
+            this.txtBxPassword.Name = "txtBxPassword";
+            this.txtBxPassword.Size = new System.Drawing.Size(255, 22);
+            this.txtBxPassword.TabIndex = 3;
+            this.txtBxPassword.UseSystemPasswordChar = true;
             // 
             // authorizeBtn
             // 
@@ -109,8 +109,8 @@
             this.Controls.Add(this.showHideBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.authorizeBtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBxPassword);
+            this.Controls.Add(this.txtBxLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AuthorizationController";
@@ -126,8 +126,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBxLogin;
+        private System.Windows.Forms.TextBox txtBxPassword;
         private System.Windows.Forms.Button authorizeBtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button showHideBtn;

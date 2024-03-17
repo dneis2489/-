@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MedicineTable = new System.Windows.Forms.DataGridView();
             this.Номер = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,14 +43,14 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.release_form = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicine_factory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBxNumberOfMedicines = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddToBasket = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.всеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.basketTable = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.on_prescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,17 +66,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtBxDeliveryDate = new System.Windows.Forms.TextBox();
+            this.txtBxOrderCost = new System.Windows.Forms.TextBox();
+            this.txtBxOrderNumber = new System.Windows.Forms.TextBox();
+            this.btnDeleteFromList = new System.Windows.Forms.Button();
+            this.btnCreateOrder = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.txtBxCustomerName = new System.Windows.Forms.TextBox();
+            this.cmbBxDeliveryAddress = new System.Windows.Forms.ComboBox();
+            this.btnChangeNumberOfProduct = new System.Windows.Forms.Button();
+            this.txtBxNumberOfProduct = new System.Windows.Forms.TextBox();
+            this.ordersTable = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,28 +89,28 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnClearFilter = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmBxReleaseForm = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.cmBxFactory = new System.Windows.Forms.ComboBox();
+            this.txtBxFindLine = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.expirationDateBox = new System.Windows.Forms.ComboBox();
+            this.cmBxExpirationDate = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pharm = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.medicinesListPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ordres = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.orderListPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnExcelExport = new System.Windows.Forms.Button();
             this.basket = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnUserFormExit = new System.Windows.Forms.Button();
             this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MedicineTable)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basketTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersTable)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.pharm.SuspendLayout();
             this.ordres.SuspendLayout();
@@ -118,15 +118,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // MedicineTable
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MedicineTable.AllowUserToAddRows = false;
+            this.MedicineTable.AllowUserToDeleteRows = false;
+            this.MedicineTable.AllowUserToResizeColumns = false;
+            this.MedicineTable.AllowUserToResizeRows = false;
+            this.MedicineTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.MedicineTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MedicineTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Номер,
             this.Column8,
             this.Column1,
@@ -140,13 +140,13 @@
             this.Column7,
             this.release_form,
             this.medicine_factory});
-            this.dataGridView1.Location = new System.Drawing.Point(144, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 20;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1036, 416);
-            this.dataGridView1.TabIndex = 1;
+            this.MedicineTable.Location = new System.Drawing.Point(144, 54);
+            this.MedicineTable.Name = "MedicineTable";
+            this.MedicineTable.ReadOnly = true;
+            this.MedicineTable.RowHeadersWidth = 20;
+            this.MedicineTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.MedicineTable.Size = new System.Drawing.Size(1036, 416);
+            this.MedicineTable.TabIndex = 1;
             // 
             // Номер
             // 
@@ -240,12 +240,12 @@
             this.medicine_factory.Name = "medicine_factory";
             this.medicine_factory.ReadOnly = true;
             // 
-            // textBox1
+            // txtBxNumberOfMedicines
             // 
-            this.textBox1.Location = new System.Drawing.Point(885, 488);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBxNumberOfMedicines.Location = new System.Drawing.Point(885, 488);
+            this.txtBxNumberOfMedicines.Name = "txtBxNumberOfMedicines";
+            this.txtBxNumberOfMedicines.Size = new System.Drawing.Size(166, 20);
+            this.txtBxNumberOfMedicines.TabIndex = 2;
             // 
             // label1
             // 
@@ -256,15 +256,15 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Количество:";
             // 
-            // button1
+            // btnAddToBasket
             // 
-            this.button1.Location = new System.Drawing.Point(1057, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Добавить в корзину";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddToBasket.Location = new System.Drawing.Point(1057, 486);
+            this.btnAddToBasket.Name = "btnAddToBasket";
+            this.btnAddToBasket.Size = new System.Drawing.Size(123, 23);
+            this.btnAddToBasket.TabIndex = 4;
+            this.btnAddToBasket.Text = "Добавить в корзину";
+            this.btnAddToBasket.UseVisualStyleBackColor = true;
+            this.btnAddToBasket.Click += new System.EventHandler(this.button1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -289,13 +289,13 @@
             this.contextMenuStrip3.Name = "contextMenuStrip3";
             this.contextMenuStrip3.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridView2
+            // basketTable
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.basketTable.AllowUserToAddRows = false;
+            this.basketTable.AllowUserToDeleteRows = false;
+            this.basketTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.basketTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.basketTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.name,
             this.on_prescription,
@@ -307,12 +307,12 @@
             this.ActiveSubstance,
             this.SpecialProperties,
             this.ReleaseForm});
-            this.dataGridView2.Location = new System.Drawing.Point(14, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(763, 432);
-            this.dataGridView2.TabIndex = 10;
+            this.basketTable.Location = new System.Drawing.Point(14, 16);
+            this.basketTable.Name = "basketTable";
+            this.basketTable.ReadOnly = true;
+            this.basketTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.basketTable.Size = new System.Drawing.Size(763, 432);
+            this.basketTable.TabIndex = 10;
             // 
             // id
             // 
@@ -434,49 +434,49 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Номер заказа";
             // 
-            // textBox2
+            // txtBxDeliveryDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(828, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(292, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtBxDeliveryDate.Location = new System.Drawing.Point(828, 200);
+            this.txtBxDeliveryDate.Name = "txtBxDeliveryDate";
+            this.txtBxDeliveryDate.ReadOnly = true;
+            this.txtBxDeliveryDate.Size = new System.Drawing.Size(292, 20);
+            this.txtBxDeliveryDate.TabIndex = 15;
             // 
-            // textBox3
+            // txtBxOrderCost
             // 
-            this.textBox3.Location = new System.Drawing.Point(828, 161);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(292, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtBxOrderCost.Location = new System.Drawing.Point(828, 161);
+            this.txtBxOrderCost.Name = "txtBxOrderCost";
+            this.txtBxOrderCost.ReadOnly = true;
+            this.txtBxOrderCost.Size = new System.Drawing.Size(292, 20);
+            this.txtBxOrderCost.TabIndex = 16;
             // 
-            // textBox5
+            // txtBxOrderNumber
             // 
-            this.textBox5.Location = new System.Drawing.Point(828, 239);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(292, 20);
-            this.textBox5.TabIndex = 18;
+            this.txtBxOrderNumber.Location = new System.Drawing.Point(828, 239);
+            this.txtBxOrderNumber.Name = "txtBxOrderNumber";
+            this.txtBxOrderNumber.ReadOnly = true;
+            this.txtBxOrderNumber.Size = new System.Drawing.Size(292, 20);
+            this.txtBxOrderNumber.TabIndex = 18;
             // 
-            // button2
+            // btnDeleteFromList
             // 
-            this.button2.Location = new System.Drawing.Point(829, 339);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Удалить из списка";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDeleteFromList.Location = new System.Drawing.Point(829, 339);
+            this.btnDeleteFromList.Name = "btnDeleteFromList";
+            this.btnDeleteFromList.Size = new System.Drawing.Size(117, 23);
+            this.btnDeleteFromList.TabIndex = 19;
+            this.btnDeleteFromList.Text = "Удалить из списка";
+            this.btnDeleteFromList.UseVisualStyleBackColor = true;
+            this.btnDeleteFromList.Click += new System.EventHandler(this.btnDeleteFromList_Click);
             // 
-            // button3
+            // btnCreateOrder
             // 
-            this.button3.Location = new System.Drawing.Point(1002, 339);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 23);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Сделать заказ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCreateOrder.Location = new System.Drawing.Point(1002, 339);
+            this.btnCreateOrder.Name = "btnCreateOrder";
+            this.btnCreateOrder.Size = new System.Drawing.Size(118, 23);
+            this.btnCreateOrder.TabIndex = 20;
+            this.btnCreateOrder.Text = "Сделать заказ";
+            this.btnCreateOrder.UseVisualStyleBackColor = true;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // label6
             // 
@@ -487,45 +487,45 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Имя заказчика";
             // 
-            // textBox6
+            // txtBxCustomerName
             // 
-            this.textBox6.Location = new System.Drawing.Point(828, 278);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(292, 20);
-            this.textBox6.TabIndex = 22;
+            this.txtBxCustomerName.Location = new System.Drawing.Point(828, 278);
+            this.txtBxCustomerName.Name = "txtBxCustomerName";
+            this.txtBxCustomerName.ReadOnly = true;
+            this.txtBxCustomerName.Size = new System.Drawing.Size(292, 20);
+            this.txtBxCustomerName.TabIndex = 22;
             // 
-            // comboBox1
+            // cmbBxDeliveryAddress
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(829, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(291, 21);
-            this.comboBox1.TabIndex = 23;
+            this.cmbBxDeliveryAddress.FormattingEnabled = true;
+            this.cmbBxDeliveryAddress.Location = new System.Drawing.Point(829, 121);
+            this.cmbBxDeliveryAddress.Name = "cmbBxDeliveryAddress";
+            this.cmbBxDeliveryAddress.Size = new System.Drawing.Size(291, 21);
+            this.cmbBxDeliveryAddress.TabIndex = 23;
             // 
-            // button4
+            // btnChangeNumberOfProduct
             // 
-            this.button4.Location = new System.Drawing.Point(828, 310);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(186, 23);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Изменить количество товара";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnChangeNumberOfProduct.Location = new System.Drawing.Point(828, 310);
+            this.btnChangeNumberOfProduct.Name = "btnChangeNumberOfProduct";
+            this.btnChangeNumberOfProduct.Size = new System.Drawing.Size(186, 23);
+            this.btnChangeNumberOfProduct.TabIndex = 24;
+            this.btnChangeNumberOfProduct.Text = "Изменить количество товара";
+            this.btnChangeNumberOfProduct.UseVisualStyleBackColor = true;
+            this.btnChangeNumberOfProduct.Click += new System.EventHandler(this.btnChangeNumberOfProduct_Click);
             // 
-            // textBox4
+            // txtBxNumberOfProduct
             // 
-            this.textBox4.Location = new System.Drawing.Point(1020, 312);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 25;
+            this.txtBxNumberOfProduct.Location = new System.Drawing.Point(1020, 312);
+            this.txtBxNumberOfProduct.Name = "txtBxNumberOfProduct";
+            this.txtBxNumberOfProduct.Size = new System.Drawing.Size(100, 20);
+            this.txtBxNumberOfProduct.TabIndex = 25;
             // 
-            // dataGridView3
+            // ordersTable
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ordersTable.AllowUserToAddRows = false;
+            this.ordersTable.AllowUserToDeleteRows = false;
+            this.ordersTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ordersTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
             this.Column10,
             this.Column11,
@@ -538,12 +538,12 @@
             this.Column16,
             this.Column17,
             this.Column18});
-            this.dataGridView3.Location = new System.Drawing.Point(157, 13);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1018, 470);
-            this.dataGridView3.TabIndex = 27;
+            this.ordersTable.Location = new System.Drawing.Point(157, 13);
+            this.ordersTable.Name = "ordersTable";
+            this.ordersTable.ReadOnly = true;
+            this.ordersTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ordersTable.Size = new System.Drawing.Size(1018, 470);
+            this.ordersTable.TabIndex = 27;
             // 
             // Column9
             // 
@@ -630,15 +630,15 @@
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
             // 
-            // button5
+            // btnClearFilter
             // 
-            this.button5.Location = new System.Drawing.Point(1025, 25);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 23);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "Сбросить фильтры";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnClearFilter.Location = new System.Drawing.Point(1025, 25);
+            this.btnClearFilter.Name = "btnClearFilter";
+            this.btnClearFilter.Size = new System.Drawing.Size(155, 23);
+            this.btnClearFilter.TabIndex = 68;
+            this.btnClearFilter.Text = "Сбросить фильтры";
+            this.btnClearFilter.UseVisualStyleBackColor = true;
+            this.btnClearFilter.Click += new System.EventHandler(this.button5_Click);
             // 
             // label11
             // 
@@ -649,13 +649,13 @@
             this.label11.TabIndex = 67;
             this.label11.Text = "Форма выпуска:";
             // 
-            // comboBox4
+            // cmBxReleaseForm
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(675, 27);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(127, 21);
-            this.comboBox4.TabIndex = 66;
+            this.cmBxReleaseForm.FormattingEnabled = true;
+            this.cmBxReleaseForm.Location = new System.Drawing.Point(675, 27);
+            this.cmBxReleaseForm.Name = "cmBxReleaseForm";
+            this.cmBxReleaseForm.Size = new System.Drawing.Size(127, 21);
+            this.cmBxReleaseForm.TabIndex = 66;
             // 
             // label10
             // 
@@ -666,21 +666,21 @@
             this.label10.TabIndex = 65;
             this.label10.Text = "Производитель:";
             // 
-            // comboBox3
+            // cmBxFactory
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(526, 27);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(127, 21);
-            this.comboBox3.TabIndex = 64;
+            this.cmBxFactory.FormattingEnabled = true;
+            this.cmBxFactory.Location = new System.Drawing.Point(526, 27);
+            this.cmBxFactory.Name = "cmBxFactory";
+            this.cmBxFactory.Size = new System.Drawing.Size(127, 21);
+            this.cmBxFactory.TabIndex = 64;
             // 
-            // textBox7
+            // txtBxFindLine
             // 
-            this.textBox7.Location = new System.Drawing.Point(144, 28);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(186, 20);
-            this.textBox7.TabIndex = 63;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtBxFindLine.Location = new System.Drawing.Point(144, 28);
+            this.txtBxFindLine.Name = "txtBxFindLine";
+            this.txtBxFindLine.Size = new System.Drawing.Size(186, 20);
+            this.txtBxFindLine.TabIndex = 63;
+            this.txtBxFindLine.TextChanged += new System.EventHandler(this.txtBxFindLine_TextChanged);
             // 
             // label9
             // 
@@ -700,14 +700,14 @@
             this.label8.TabIndex = 61;
             this.label8.Text = "Поиск:";
             // 
-            // expirationDateBox
+            // cmBxExpirationDate
             // 
-            this.expirationDateBox.FormattingEnabled = true;
-            this.expirationDateBox.Location = new System.Drawing.Point(366, 27);
-            this.expirationDateBox.Name = "expirationDateBox";
-            this.expirationDateBox.Size = new System.Drawing.Size(127, 21);
-            this.expirationDateBox.TabIndex = 60;
-            this.expirationDateBox.SelectedIndexChanged += new System.EventHandler(this.expirationDateBox_SelectedIndexChanged);
+            this.cmBxExpirationDate.FormattingEnabled = true;
+            this.cmBxExpirationDate.Location = new System.Drawing.Point(366, 27);
+            this.cmBxExpirationDate.Name = "cmBxExpirationDate";
+            this.cmBxExpirationDate.Size = new System.Drawing.Size(127, 21);
+            this.cmBxExpirationDate.TabIndex = 60;
+            this.cmBxExpirationDate.SelectedIndexChanged += new System.EventHandler(this.cmBxExpirationDate_SelectedIndexChanged);
             // 
             // tabControl1
             // 
@@ -722,19 +722,19 @@
             // 
             // pharm
             // 
-            this.pharm.Controls.Add(this.flowLayoutPanel2);
+            this.pharm.Controls.Add(this.medicinesListPanel);
             this.pharm.Controls.Add(this.label1);
-            this.pharm.Controls.Add(this.textBox1);
-            this.pharm.Controls.Add(this.button1);
-            this.pharm.Controls.Add(this.button5);
-            this.pharm.Controls.Add(this.dataGridView1);
+            this.pharm.Controls.Add(this.txtBxNumberOfMedicines);
+            this.pharm.Controls.Add(this.btnAddToBasket);
+            this.pharm.Controls.Add(this.btnClearFilter);
+            this.pharm.Controls.Add(this.MedicineTable);
             this.pharm.Controls.Add(this.label11);
-            this.pharm.Controls.Add(this.textBox7);
-            this.pharm.Controls.Add(this.comboBox4);
+            this.pharm.Controls.Add(this.txtBxFindLine);
+            this.pharm.Controls.Add(this.cmBxReleaseForm);
             this.pharm.Controls.Add(this.label8);
             this.pharm.Controls.Add(this.label10);
-            this.pharm.Controls.Add(this.expirationDateBox);
-            this.pharm.Controls.Add(this.comboBox3);
+            this.pharm.Controls.Add(this.cmBxExpirationDate);
+            this.pharm.Controls.Add(this.cmBxFactory);
             this.pharm.Controls.Add(this.label9);
             this.pharm.Location = new System.Drawing.Point(4, 22);
             this.pharm.Name = "pharm";
@@ -743,20 +743,19 @@
             this.pharm.TabIndex = 0;
             this.pharm.Text = "Лекарства";
             this.pharm.UseVisualStyleBackColor = true;
-            this.pharm.Click += new System.EventHandler(this.pharm_Click);
             // 
-            // flowLayoutPanel2
+            // medicinesListPanel
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 6);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(135, 497);
-            this.flowLayoutPanel2.TabIndex = 69;
+            this.medicinesListPanel.Location = new System.Drawing.Point(6, 6);
+            this.medicinesListPanel.Name = "medicinesListPanel";
+            this.medicinesListPanel.Size = new System.Drawing.Size(135, 497);
+            this.medicinesListPanel.TabIndex = 69;
             // 
             // ordres
             // 
-            this.ordres.Controls.Add(this.flowLayoutPanel1);
-            this.ordres.Controls.Add(this.button7);
-            this.ordres.Controls.Add(this.dataGridView3);
+            this.ordres.Controls.Add(this.orderListPanel);
+            this.ordres.Controls.Add(this.btnExcelExport);
+            this.ordres.Controls.Add(this.ordersTable);
             this.ordres.Location = new System.Drawing.Point(4, 22);
             this.ordres.Name = "ordres";
             this.ordres.Padding = new System.Windows.Forms.Padding(3);
@@ -765,40 +764,40 @@
             this.ordres.Text = "Заказы";
             this.ordres.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
+            // orderListPanel
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 6);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(145, 499);
-            this.flowLayoutPanel1.TabIndex = 29;
+            this.orderListPanel.Location = new System.Drawing.Point(6, 6);
+            this.orderListPanel.Name = "orderListPanel";
+            this.orderListPanel.Size = new System.Drawing.Size(145, 499);
+            this.orderListPanel.TabIndex = 29;
             // 
-            // button7
+            // btnExcelExport
             // 
-            this.button7.Location = new System.Drawing.Point(1019, 489);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 23);
-            this.button7.TabIndex = 28;
-            this.button7.Text = "Выгрузить в Excel";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnExcelExport.Location = new System.Drawing.Point(1019, 489);
+            this.btnExcelExport.Name = "btnExcelExport";
+            this.btnExcelExport.Size = new System.Drawing.Size(156, 23);
+            this.btnExcelExport.TabIndex = 28;
+            this.btnExcelExport.Text = "Выгрузить в Excel";
+            this.btnExcelExport.UseVisualStyleBackColor = true;
+            this.btnExcelExport.Click += new System.EventHandler(this.btnExcelExport_Click);
             // 
             // basket
             // 
-            this.basket.Controls.Add(this.dataGridView2);
-            this.basket.Controls.Add(this.button3);
+            this.basket.Controls.Add(this.basketTable);
+            this.basket.Controls.Add(this.btnCreateOrder);
             this.basket.Controls.Add(this.label2);
             this.basket.Controls.Add(this.label3);
-            this.basket.Controls.Add(this.textBox4);
+            this.basket.Controls.Add(this.txtBxNumberOfProduct);
             this.basket.Controls.Add(this.label4);
-            this.basket.Controls.Add(this.button4);
+            this.basket.Controls.Add(this.btnChangeNumberOfProduct);
             this.basket.Controls.Add(this.label5);
-            this.basket.Controls.Add(this.comboBox1);
-            this.basket.Controls.Add(this.textBox2);
-            this.basket.Controls.Add(this.textBox6);
-            this.basket.Controls.Add(this.textBox3);
+            this.basket.Controls.Add(this.cmbBxDeliveryAddress);
+            this.basket.Controls.Add(this.txtBxDeliveryDate);
+            this.basket.Controls.Add(this.txtBxCustomerName);
+            this.basket.Controls.Add(this.txtBxOrderCost);
             this.basket.Controls.Add(this.label6);
-            this.basket.Controls.Add(this.textBox5);
-            this.basket.Controls.Add(this.button2);
+            this.basket.Controls.Add(this.txtBxOrderNumber);
+            this.basket.Controls.Add(this.btnDeleteFromList);
             this.basket.Location = new System.Drawing.Point(4, 22);
             this.basket.Name = "basket";
             this.basket.Size = new System.Drawing.Size(1191, 515);
@@ -806,31 +805,31 @@
             this.basket.Text = "Корзина";
             this.basket.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnUserFormExit
             // 
-            this.button6.Location = new System.Drawing.Point(1092, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 23);
-            this.button6.TabIndex = 70;
-            this.button6.Text = "Выход";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnUserFormExit.Location = new System.Drawing.Point(1092, 5);
+            this.btnUserFormExit.Name = "btnUserFormExit";
+            this.btnUserFormExit.Size = new System.Drawing.Size(115, 23);
+            this.btnUserFormExit.TabIndex = 70;
+            this.btnUserFormExit.Text = "Выход";
+            this.btnUserFormExit.UseVisualStyleBackColor = true;
+            this.btnUserFormExit.Click += new System.EventHandler(this.btnUserFormExit_Click);
             // 
             // UserController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 567);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnUserFormExit);
             this.Controls.Add(this.tabControl1);
             this.Name = "UserController";
             this.Text = "Модуль корпоративной информационной системы сети аптек";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserController_FormClosing);
             this.Load += new System.EventHandler(this.UserForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MedicineTable)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.basketTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersTable)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.pharm.ResumeLayout(false);
             this.pharm.PerformLayout();
@@ -843,45 +842,45 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView MedicineTable;
+        private System.Windows.Forms.TextBox txtBxNumberOfMedicines;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddToBasket;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem всеToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView basketTable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtBxDeliveryDate;
+        private System.Windows.Forms.TextBox txtBxOrderCost;
+        private System.Windows.Forms.TextBox txtBxOrderNumber;
+        private System.Windows.Forms.Button btnDeleteFromList;
+        private System.Windows.Forms.Button btnCreateOrder;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox txtBxCustomerName;
+        private System.Windows.Forms.ComboBox cmbBxDeliveryAddress;
+        private System.Windows.Forms.Button btnChangeNumberOfProduct;
+        private System.Windows.Forms.TextBox txtBxNumberOfProduct;
+        private System.Windows.Forms.DataGridView ordersTable;
+        private System.Windows.Forms.Button btnClearFilter;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmBxReleaseForm;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox cmBxFactory;
+        private System.Windows.Forms.TextBox txtBxFindLine;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox expirationDateBox;
+        private System.Windows.Forms.ComboBox cmBxExpirationDate;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage pharm;
         private System.Windows.Forms.TabPage ordres;
         private System.Windows.Forms.TabPage basket;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnUserFormExit;
+        private System.Windows.Forms.Button btnExcelExport;
         private System.Windows.Forms.DataGridViewTextBoxColumn Номер;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -895,8 +894,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn release_form;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicine_factory;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel orderListPanel;
+        private System.Windows.Forms.FlowLayoutPanel medicinesListPanel;
         private System.Windows.Forms.BindingSource medicineBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
