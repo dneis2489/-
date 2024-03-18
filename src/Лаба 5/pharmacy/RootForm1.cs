@@ -2,6 +2,7 @@
 using pharmacy.service;
 using System;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -140,17 +141,25 @@ namespace pharmacy
 
         private void btnAddSchedule_Click(object sender, EventArgs e) // Добавить график работы - Добавить
         {
+            string pattern = @"^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$";
             if (txtBxStartOnWeekdays.Text != "" && txtBxEndOnWeekdays.Text != "" && txtBxStartOnWeekend.Text != "" && txtBxEndOnWeekend.Text != "")
             {
-                ScheduleService.Add(txtBxStartOnWeekdays.Text, txtBxEndOnWeekdays.Text, txtBxStartOnWeekend.Text, txtBxEndOnWeekend.Text);
-                txtBxStartOnWeekdays.Text = "";
-                txtBxEndOnWeekdays.Text = "";
-                txtBxStartOnWeekend.Text = "";
-                txtBxEndOnWeekend.Text = "";
-                cmbBxSchedulePhramacy.Items.Clear();
-                cmbBxDeleteWorkScheduleName.Items.Clear();
-                ScheduleService.GetAll().ForEach(item => cmbBxSchedulePhramacy.Items.Add(item));
-                ScheduleService.GetAll().ForEach(item => cmbBxDeleteWorkScheduleName.Items.Add(item));
+                if(Regex.IsMatch(txtBxStartOnWeekdays.Text, pattern) == true && Regex.IsMatch(txtBxEndOnWeekdays.Text, pattern) == true && Regex.IsMatch(txtBxStartOnWeekend.Text, pattern) == true && Regex.IsMatch(txtBxEndOnWeekend.Text, pattern) == true)
+                {
+                    ScheduleService.Add(txtBxStartOnWeekdays.Text, txtBxEndOnWeekdays.Text, txtBxStartOnWeekend.Text, txtBxEndOnWeekend.Text);
+                    txtBxStartOnWeekdays.Text = "";
+                    txtBxEndOnWeekdays.Text = "";
+                    txtBxStartOnWeekend.Text = "";
+                    txtBxEndOnWeekend.Text = "";
+                    cmbBxSchedulePhramacy.Items.Clear();
+                    cmbBxDeleteWorkScheduleName.Items.Clear();
+                    ScheduleService.GetAll().ForEach(item => cmbBxSchedulePhramacy.Items.Add(item));
+                    ScheduleService.GetAll().ForEach(item => cmbBxDeleteWorkScheduleName.Items.Add(item));
+                }
+                else
+                {
+                    MessageBox.Show("Время должно быть заполнено в формате ЧЧ:ММ:СС", "Пожалуйста, заполните все поля", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
@@ -191,33 +200,47 @@ namespace pharmacy
             if (txtBxFullName.Text != "" && txtBxBirthDate.Text != "" && txtBxPhoneNumber.Text != "" && txtBxLogin.Text != "" && txtBxPassword.Text != "" && txtBxRetypePassword.Text != "" &&
                 !Equals(cmbBxSystemRole.SelectedItem, ""))
             {
-                if (txtBxPassword.Text == txtBxRetypePassword.Text && ((cmbBxSystemRole.SelectedItem.ToString() == "Администратор" && cmbBxLinkedPharmacy.SelectedIndex != -1) || (cmbBxSystemRole.SelectedItem.ToString() != "Администратор")))
+                if (txtBxPassword.Text == txtBxRetypePassword.Text)
                 {
-                    
-                    string choiceRole = cmbBxSystemRole.SelectedItem.ToString();
-                    char role = choiceRole[0];
-                    int roleId = Int32.Parse(role.ToString());
-                    if (cmbBxSystemRole.SelectedItem.ToString() == "2. Администратор" && cmbBxLinkedPharmacy.SelectedIndex != -1)
+                    if (cmbBxSystemRole.SelectedItem.ToString() == "2. Администратор" && cmbBxLinkedPharmacy.SelectedIndex == -1)
                     {
-                        string choicePharm = cmbBxLinkedPharmacy.SelectedItem.ToString();
-                        char pharm = choicePharm[0];
-                        int pharmId = Int32.Parse(pharm.ToString());
-                        UsersService.AddUser(txtBxFullName.Text, txtBxBirthDate.Text, txtBxPhoneNumber.Text, txtBxLogin.Text, txtBxPassword.Text, roleId, pharmId);
+                        MessageBox.Show("Для Администратора необходимо заполнить поле 'Закреплен за аптекой'", "Пожалуйста, попробуйте ещё раз", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        UsersService.AddUser(txtBxFullName.Text, txtBxBirthDate.Text, txtBxPhoneNumber.Text, txtBxLogin.Text, txtBxPassword.Text, roleId, 0);
+                        if (Regex.IsMatch(txtBxBirthDate.Text, @"^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.\d{4}$") == false)
+                        {
+                            MessageBox.Show("Дата рождения должна быть заполнена в формате ДД.ММ.ГГГГ", "Пожалуйста, попробуйте ещё раз", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            string choiceRole = cmbBxSystemRole.SelectedItem.ToString();
+                            char role = choiceRole[0];
+                            int roleId = Int32.Parse(role.ToString());
+                            if (cmbBxSystemRole.SelectedItem.ToString() == "2. Администратор" && cmbBxLinkedPharmacy.SelectedIndex != -1)
+                            {
+                                string choicePharm = cmbBxLinkedPharmacy.SelectedItem.ToString();
+                                char pharm = choicePharm[0];
+                                int pharmId = Int32.Parse(pharm.ToString());
+                                UsersService.AddUser(txtBxFullName.Text, txtBxBirthDate.Text, txtBxPhoneNumber.Text, txtBxLogin.Text, txtBxPassword.Text, roleId, pharmId);
+                            }
+                            else
+                            {
+                                UsersService.AddUser(txtBxFullName.Text, txtBxBirthDate.Text, txtBxPhoneNumber.Text, txtBxLogin.Text, txtBxPassword.Text, roleId, 0);
+                            }
+                            txtBxFullName.Text = "";
+                            txtBxBirthDate.Text = "";
+                            txtBxPhoneNumber.Text = "";
+                            txtBxLogin.Text = "";
+                            txtBxPassword.Text = "";
+                            txtBxRetypePassword.Text = "";
+                            cmbBxSystemRole.SelectedIndex = -1;
+                            cmbBxLinkedPharmacy.SelectedIndex = -1;
+                            cmbBxDeleteUserFullName.Items.Clear();
+                            UsersService.GetAll().ForEach(item => cmbBxDeleteUserFullName.Items.Add(item));
+                        }
                     }
-                    txtBxFullName.Text = "";
-                    txtBxBirthDate.Text = "";
-                    txtBxPhoneNumber.Text = "";
-                    txtBxLogin.Text = "";
-                    txtBxPassword.Text = "";
-                    txtBxRetypePassword.Text = "";
-                    cmbBxSystemRole.SelectedIndex = -1;
-                    cmbBxLinkedPharmacy.SelectedIndex = -1;
-                    cmbBxDeleteUserFullName.Items.Clear();
-                    UsersService.GetAll().ForEach(item => cmbBxDeleteUserFullName.Items.Add(item));
+                    
                 }
                 else
                 {
@@ -226,7 +249,7 @@ namespace pharmacy
             }
             else
             {
-                MessageBox.Show("Ошибка подключения к базе с аптеками", "Пожалуйста, попробуйте ещё раз", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Заполнены не все оябязательные поля", "Пожалуйста, попробуйте ещё раз", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -605,6 +628,11 @@ namespace pharmacy
         private void RootController_FormClosing(object sender, FormClosingEventArgs e)
         {
             authController.Show();
+        }
+
+        private void txtBxStartOnWeekdays_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

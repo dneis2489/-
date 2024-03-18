@@ -225,6 +225,7 @@
             this.txtBxStartOnWeekdays.Name = "txtBxStartOnWeekdays";
             this.txtBxStartOnWeekdays.Size = new System.Drawing.Size(220, 20);
             this.txtBxStartOnWeekdays.TabIndex = 13;
+            this.txtBxStartOnWeekdays.TextChanged += new System.EventHandler(this.txtBxStartOnWeekdays_TextChanged);
             // 
             // label7
             // 
