@@ -497,6 +497,7 @@
             // 
             // cmbBxDeliveryAddress
             // 
+            this.cmbBxDeliveryAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxDeliveryAddress.FormattingEnabled = true;
             this.cmbBxDeliveryAddress.Location = new System.Drawing.Point(829, 121);
             this.cmbBxDeliveryAddress.Name = "cmbBxDeliveryAddress";
@@ -651,6 +652,7 @@
             // 
             // cmBxReleaseForm
             // 
+            this.cmBxReleaseForm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmBxReleaseForm.FormattingEnabled = true;
             this.cmBxReleaseForm.Location = new System.Drawing.Point(675, 27);
             this.cmBxReleaseForm.Name = "cmBxReleaseForm";
@@ -668,6 +670,7 @@
             // 
             // cmBxFactory
             // 
+            this.cmBxFactory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmBxFactory.FormattingEnabled = true;
             this.cmBxFactory.Location = new System.Drawing.Point(526, 27);
             this.cmBxFactory.Name = "cmBxFactory";
@@ -702,6 +705,7 @@
             // 
             // cmBxExpirationDate
             // 
+            this.cmBxExpirationDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmBxExpirationDate.FormattingEnabled = true;
             this.cmBxExpirationDate.Location = new System.Drawing.Point(366, 27);
             this.cmBxExpirationDate.Name = "cmBxExpirationDate";

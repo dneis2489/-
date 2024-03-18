@@ -301,6 +301,7 @@
             // 
             // cmbBxSchedulePhramacy
             // 
+            this.cmbBxSchedulePhramacy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxSchedulePhramacy.FormattingEnabled = true;
             this.cmbBxSchedulePhramacy.Location = new System.Drawing.Point(10, 214);
             this.cmbBxSchedulePhramacy.Name = "cmbBxSchedulePhramacy";
@@ -405,6 +406,7 @@
             // 
             // cmbBxLinkedPharmacy
             // 
+            this.cmbBxLinkedPharmacy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxLinkedPharmacy.FormattingEnabled = true;
             this.cmbBxLinkedPharmacy.Location = new System.Drawing.Point(9, 381);
             this.cmbBxLinkedPharmacy.Name = "cmbBxLinkedPharmacy";
@@ -413,6 +415,7 @@
             // 
             // cmbBxSystemRole
             // 
+            this.cmbBxSystemRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxSystemRole.FormattingEnabled = true;
             this.cmbBxSystemRole.Location = new System.Drawing.Point(12, 332);
             this.cmbBxSystemRole.Name = "cmbBxSystemRole";
@@ -539,6 +542,7 @@
             // 
             // cmbBxDeletePharmacyName
             // 
+            this.cmbBxDeletePharmacyName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxDeletePharmacyName.FormattingEnabled = true;
             this.cmbBxDeletePharmacyName.Location = new System.Drawing.Point(6, 48);
             this.cmbBxDeletePharmacyName.Name = "cmbBxDeletePharmacyName";
@@ -556,6 +560,7 @@
             // 
             // cmbBxDeleteWorkScheduleName
             // 
+            this.cmbBxDeleteWorkScheduleName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxDeleteWorkScheduleName.FormattingEnabled = true;
             this.cmbBxDeleteWorkScheduleName.Location = new System.Drawing.Point(6, 48);
             this.cmbBxDeleteWorkScheduleName.Name = "cmbBxDeleteWorkScheduleName";
@@ -573,6 +578,7 @@
             // 
             // cmbBxDeleteUserFullName
             // 
+            this.cmbBxDeleteUserFullName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxDeleteUserFullName.FormattingEnabled = true;
             this.cmbBxDeleteUserFullName.Location = new System.Drawing.Point(9, 56);
             this.cmbBxDeleteUserFullName.Name = "cmbBxDeleteUserFullName";
@@ -590,6 +596,7 @@
             // 
             // cmbBxDeleteOrderStatusName
             // 
+            this.cmbBxDeleteOrderStatusName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxDeleteOrderStatusName.FormattingEnabled = true;
             this.cmbBxDeleteOrderStatusName.Location = new System.Drawing.Point(6, 40);
             this.cmbBxDeleteOrderStatusName.Name = "cmbBxDeleteOrderStatusName";
@@ -607,6 +614,7 @@
             // 
             // cmbBxDeleteCategoryName
             // 
+            this.cmbBxDeleteCategoryName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBxDeleteCategoryName.FormattingEnabled = true;
             this.cmbBxDeleteCategoryName.Location = new System.Drawing.Point(6, 47);
             this.cmbBxDeleteCategoryName.Name = "cmbBxDeleteCategoryName";
